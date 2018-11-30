@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20637" started-at="2018-11-29T13:00:30Z" finished-at="2018-11-29T13:00:51Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20637" started-at="2018-11-29T13:00:30Z" finished-at="2018-11-29T13:00:51Z">
+      <class name="com.torenzosite.qa.testcases.TryTorenzoForFreePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@47c62251]" name="setUp" is-config="true" duration-ms="9992" started-at="2018-11-29T18:30:30Z" finished-at="2018-11-29T18:30:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="clickOnTryTorenzoForFree()[pri:1, instance:com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@47c62251]" name="clickOnTryTorenzoForFree" duration-ms="10614" started-at="2018-11-29T18:30:40Z" finished-at="2018-11-29T18:30:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnTryTorenzoForFree -->
+      </class> <!-- com.torenzosite.qa.testcases.TryTorenzoForFreePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
