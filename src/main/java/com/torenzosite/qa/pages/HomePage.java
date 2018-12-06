@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.torenzosite.qa.base.TestBase;
-
+import static com.torenzosite.qa.util.TestUtil.title;
 public class HomePage extends TestBase {
 
 	@FindBy(linkText= "Torenzo POS")
@@ -26,19 +26,34 @@ public class HomePage extends TestBase {
 	WebElement aboutUs;
 
 	@FindBy(xpath= "//*[contains(text(),'Try Torenzo For Free')]")
-	WebElement tryTorenzoForFree;
+	 WebElement tryTorenzoForFree;
 
-	@FindBy(linkText= "Email Address")
+	@FindBy(xpath= "//input[@type='text' and @placeholder='Email Address']")
 	WebElement emailAddress;
 	
-	@FindBy(linkText= "CLICK HERE TO TRY TORENZO FOR FREE")
+	@FindBy(xpath= "//input[@type='submit' and @value='CLICK HERE TO TRY TORENZO FOR FREE']")
 	WebElement ClickHereToTryTorenzoForFree;
-		
-/*	<a href="#manage" data-toggle="pill">Manage</a>
-		
-	<a rel="jumpdown" href="#features" style="">Features</a>*/	
-	//Initializing the Page Objects:
 	
+	@FindBy(xpath= "//a[text()='Leave us a message']")
+	WebElement LeaveUsaMessage;
+	
+	@FindBy(xpath= "//a[text()='Privacy Policy' ]")
+	WebElement privacyPolicy;
+	
+	@FindBy(xpath= "//a[text()='Website by Pronto' ]")
+	WebElement websiteByPronto;
+	
+	@FindBy(xpath= "//a[text()='Home']")
+	WebElement home;
+	
+	@FindBy(xpath= "//a[text()='Contact Us' ]")
+	public static WebElement contactUs;
+
+	@FindBy(xpath= "//a[text()='Blog' ]")
+	WebElement blog;
+		
+
+
 	public HomePage() throws IOException{
 		PageFactory.initElements(driver, this);
 	}
@@ -81,8 +96,63 @@ public class HomePage extends TestBase {
 			
 		}
 		
+		public AboutUsPage clickOnAboutUs() throws IOException{
+			aboutUs.click();
+			return new AboutUsPage();
+			
+		}
 		
+		public void passEmailAddress(String email)throws IOException{
 		
+			emailAddress.click();
+			emailAddress.sendKeys(email);
+		
+		}
+		
+		public void ClickHereOnToTryTorenzoForFree(){
+			ClickHereToTryTorenzoForFree.click();
+		 title = driver.getTitle();
+			
+		}
+		
+		public LeaveUsPage ClickOnLeaveUsaMessage() throws IOException{
+			
+			LeaveUsaMessage.click();
+			
+			return new LeaveUsPage();	 
+			
+		}
+		
+		public void ClickOnPrivacyPolicy(){
+			privacyPolicy.click();
+	
+			
+		}
+		
+		public void ClickOnWebsiteByPronto(){
+			websiteByPronto.click();
+	
+			
+		}
+		
+		public HomePage ClickOnHome() throws IOException{
+			home.click();
+             return new HomePage();	
+			
+		}
+		
+		public ContactUsPage ClickOnContactUs() throws IOException{
+			contactUs.click();
+			return new ContactUsPage();
+	
+			
+		}
+		
+		public void ClickOnBlog(){
+			blog.click();
+	
+			
+		}
 }
 
 

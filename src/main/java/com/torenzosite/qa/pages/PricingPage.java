@@ -11,16 +11,16 @@ import com.torenzosite.qa.base.TestBase;
 public class PricingPage extends TestBase {
 	
 	
-	@FindBy(linkText= "TRY TORENZO FOR FREE")
+	@FindBy(xpath= "//a[@class='btn btn-primary btn-lg' and text()='TRY TORENZO FOR FREE']")
 	WebElement tryTorenzoForFree;
 	
 	public PricingPage() throws IOException {
 		PageFactory.initElements(driver, this);
 	}
 
-	public PricingPage clickOnTryTorenzoForFree() throws IOException{
+	public ContactUsPage clickOnTryTorenzoForFree() throws IOException{
 		tryTorenzoForFree.click();
-		return new PricingPage();
+		return new ContactUsPage();
 		
 	}
 	

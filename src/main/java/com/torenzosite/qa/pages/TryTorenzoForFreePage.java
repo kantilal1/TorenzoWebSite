@@ -38,7 +38,12 @@ public class TryTorenzoForFreePage extends TestBase{
 	@FindBy(xpath = "//div[@class='gform_footer top_label']//input[@id='gform_submit_button_6' and @type='submit' and @value='Submit']")
 	WebElement submit;
 	
-
+	//Validation and error message
+	@FindBy(xpath = "//div[@class='alert alert-error']")
+	WebElement alertMessage;
+	
+	@FindBy(xpath = "//div[@class='gfield_description validation_message']")
+	WebElement validationMessage;
 	
 	
 	public TryTorenzoForFreePage() throws IOException {
@@ -57,44 +62,57 @@ public class TryTorenzoForFreePage extends TestBase{
 		
 	}
 	
-	public void passFirstName(){
-		
-		firstName.sendKeys();
-		
-	}
-	
-	public void passLastName()
-	{
-		
-		lastName.sendKeys();
+	public String getTextFromAlertMessage() throws InterruptedException{
+		Thread.sleep(4000);
+		return alertMessage.getText();
 		
 	}
 	
-	public void passBussiness()
-	{
-		
-		bussiness.sendKeys();
-		
-	}
-	
-	public void passCountry()
-	{
-		
-		country.sendKeys();
+	public String getTextFromValidationMessage() throws InterruptedException{
+		Thread.sleep(4000);
+		return validationMessage.getText();
 		
 	}
 	
-	public void passPhoneNo()
-	{
+	
+	public void passFirstName(String nameFirst){
 		
-		phoneNo.sendKeys();
+		firstName.sendKeys(nameFirst);
 		
 	}
 	
-	public void passEmailID()
+	public void passLastName(String nameLast)
 	{
 		
-		emailID.sendKeys();
+		lastName.sendKeys(nameLast);
+		
+	}
+	
+	public void passBussiness(String bussinessPass)
+	{
+		
+		bussiness.sendKeys(bussinessPass);
+		
+	}
+	
+	public void passCountry(String bussinessPass)
+	{
+		
+		country.sendKeys(bussinessPass);
+		
+	}
+	
+	public void passPhoneNo(String numberPass)
+	{
+		
+		phoneNo.sendKeys(numberPass);
+		
+	}
+	
+	public void passEmailID(String emailPass)
+	{
+		
+		emailID.sendKeys(emailPass);
 		
 	}
 

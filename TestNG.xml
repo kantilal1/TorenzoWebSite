@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+	<suite name = "Torenzo" verbose="1">
+		<test name ="TorenzoTest">
+			<classes>
+				<class name = "com.torenzosite.qa.testcases.BrokenImageAndLinks" />
+				<class name =  "com.torenzosite.qa.testcases.HomePageTest" />
+				<class name = "com.torenzosite.qa.testcases.TorenzoPOSPageTest" />
+				<class name = "com.torenzosite.qa.testcases.FeaturePageTest" />
+				<class name = "com.torenzosite.qa.testcases.HardwarePageTest" />
+				<class name = "com.torenzosite.qa.testcases.PricingPageTest"/>
+			</classes>
+		</test>
+	</suite>

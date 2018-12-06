@@ -21,9 +21,7 @@ public class FeaturesPage extends TestBase{
 
 	@FindBy(xpath = "//a[contains(text(),'Grow')]")
 	WebElement grow;
-	
-	
-	
+		
 	@FindBy(xpath = "//*[text()='POINT OF SALE']")
 	WebElement PointsOfSale;
 	
@@ -38,6 +36,12 @@ public class FeaturesPage extends TestBase{
 	
 	@FindBy(xpath = "//*[text()='SCALABILITY']")
 	WebElement Scalability;
+
+	@FindBy(xpath = "//a[@class='btn btn-primary btn-lg' and text()='Try Torenzo For Free']")
+  public static WebElement tryTorenzoForFree;
+
+	
+	
 
 		
 	public FeaturesPage() throws IOException {
@@ -92,6 +96,13 @@ public class FeaturesPage extends TestBase{
 	
 	public String getTextFromGrow(){
 		return grow.getText();
+		
+	}
+	
+	public TryTorenzoForFreePage ClickOnTryTorenzoForFreePage() throws IOException{
+		
+		tryTorenzoForFree.click();
+		return new TryTorenzoForFreePage();
 		
 	}
 	

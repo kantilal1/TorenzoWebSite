@@ -1,5 +1,8 @@
 package TryTorenzoForFreePage;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -25,6 +28,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	
 	
 	@BeforeMethod
+	@BeforeMethod
 	public void setUp() throws IOException, InterruptedException{
 		
 		initialization();
@@ -36,7 +40,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
-		Assert.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");		 
+		AssertJUnit.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");		 
 		
 	}
 	
@@ -47,7 +51,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 		/*String  title =	driver.findElement(By.xpath("//*[text()='Try Torenzo for FREE today']")).getText();
 		System.out.println("title" +title);*/
 		System.out.println("Title==>" +tryTorenzoForFreePage.validateTryTorenzoForFree());
-		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today page not found");		 
+		AssertJUnit.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today page not found");		 
 		/*
 		driver.findElement(By.id("First name")).sendKeys("hello");	
 		System.out.println("Hello2");

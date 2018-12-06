@@ -9,6 +9,7 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 import com.torenzosite.qa.base.TestBase;
 
@@ -21,12 +22,27 @@ public class TestUtil extends TestBase{
 
 	public static long PAGE_LOAD_TIMEOUT= 40;
 	public static long IMPLICIT_WAIT = 40;
+	public static String title = "";
 	
-	public static void scrollUp(){
+	public static void scrollUpByPixel(int pixel){
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,1500)");
+		js.executeScript("window.scrollBy(0, 'pixel')");
 	
 	}
+	
+	public static void scrollUpAtEndOFPage(){
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	
+	}
+	
+	public static void scrollUpHorizontalORVIsibilityOFElement(WebElement element){
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", element);
+	
+	}
+	
+	
 	
 	static Workbook book;
 	static Sheet sheet;

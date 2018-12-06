@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20637" started-at="2018-11-29T13:00:30Z" finished-at="2018-11-29T13:00:51Z">
+  <suite name="Torenzo" duration-ms="100852" started-at="2018-12-06T05:35:12Z" finished-at="2018-12-06T05:36:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20637" started-at="2018-11-29T13:00:30Z" finished-at="2018-11-29T13:00:51Z">
-      <class name="com.torenzosite.qa.testcases.TryTorenzoForFreePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@47c62251]" name="setUp" is-config="true" duration-ms="9992" started-at="2018-11-29T18:30:30Z" finished-at="2018-11-29T18:30:40Z">
+    <test name="Default test" duration-ms="100852" started-at="2018-12-06T05:35:12Z" finished-at="2018-12-06T05:36:53Z">
+      <class name="com.torenzosite.qa.testcases.HardwarePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HardwarePageTest@31ef45e3]" name="setUp" is-config="true" duration-ms="38935" started-at="2018-12-06T05:35:12Z" finished-at="2018-12-06T05:35:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickOnTryTorenzoForFree()[pri:1, instance:com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@47c62251]" name="clickOnTryTorenzoForFree" duration-ms="10614" started-at="2018-11-29T18:30:40Z" finished-at="2018-11-29T18:30:51Z">
+        <test-method status="PASS" signature="verifyHomePageTitle()[pri:0, instance:com.torenzosite.qa.testcases.HardwarePageTest@31ef45e3]" name="verifyHomePageTitle" duration-ms="1499" started-at="2018-12-06T05:35:51Z" finished-at="2018-12-06T05:35:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnTryTorenzoForFree -->
-      </class> <!-- com.torenzosite.qa.testcases.TryTorenzoForFreePageTest -->
+        </test-method> <!-- verifyHomePageTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HardwarePageTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="469" started-at="2018-12-06T05:35:53Z" finished-at="2018-12-06T05:35:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HardwarePageTest@31ef45e3]" name="setUp" is-config="true" duration-ms="19920" started-at="2018-12-06T05:35:53Z" finished-at="2018-12-06T05:36:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyHardwarePageTitle()[pri:1, instance:com.torenzosite.qa.testcases.HardwarePageTest@31ef45e3]" name="verifyHardwarePageTitle" duration-ms="14451" started-at="2018-12-06T05:36:13Z" finished-at="2018-12-06T05:36:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHardwarePageTitle -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HardwarePageTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="945" started-at="2018-12-06T05:36:27Z" finished-at="2018-12-06T05:36:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HardwarePageTest@31ef45e3]" name="setUp" is-config="true" duration-ms="15010" started-at="2018-12-06T05:36:28Z" finished-at="2018-12-06T05:36:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyContactUsPage()[pri:2, instance:com.torenzosite.qa.testcases.HardwarePageTest@31ef45e3]" name="verifyContactUsPage" duration-ms="9146" started-at="2018-12-06T05:36:43Z" finished-at="2018-12-06T05:36:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContactUsPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HardwarePageTest@31ef45e3]" name="tearDown" is-config="true" duration-ms="438" started-at="2018-12-06T05:36:52Z" finished-at="2018-12-06T05:36:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.torenzosite.qa.testcases.HardwarePageTest -->
     </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+  </suite> <!-- Torenzo -->
 </testng-results>

@@ -2,6 +2,7 @@ package com.torenzosite.qa.pages;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,9 +12,13 @@ import com.torenzosite.qa.base.TestBase;
 public class HardwarePage extends TestBase {
 
 
-	@FindBy(id= "Try Torenzo For Free")
+	@FindBy(xpath= "//a[@class='btn btn-primary btn-lg']")
 	WebElement tryTorenzoForFree;
-    	
+	
+	@FindBy(xpath= "//a[text()='Contact Us Today']")
+	WebElement contactUsToday;
+	
+	
 	public HardwarePage() throws IOException {
 		PageFactory.initElements(driver, this);
 	}
@@ -23,9 +28,15 @@ public class HardwarePage extends TestBase {
 		return driver.getTitle();
 	}
 	
-	public void clickOnTryTorenzoForFree(){
+	public ContactUsPage clickOnTryTorenzoForFree() throws IOException{
 		
 		tryTorenzoForFree.click();
+		return new ContactUsPage();
+	}
+	
+	public ContactUsPage clickOnContactUsToday() throws IOException{
+		contactUsToday.click();
+		return new ContactUsPage();
 	}
 
 }

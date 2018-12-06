@@ -1,5 +1,8 @@
 package com.torenzosite.qa.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -8,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.torenzosite.qa.base.TestBase;
+import com.torenzosite.qa.pages.ContactUsPage;
 import com.torenzosite.qa.pages.FeaturesPage;
 import com.torenzosite.qa.pages.HomePage;
 import com.torenzosite.qa.pages.PricingPage;
@@ -19,6 +23,8 @@ public class PricingPageTest extends TestBase {
 	
 	HomePage homePage;
 	PricingPage pricingPage;
+	ContactUsPage contactUsPage;
+	
 	public PricingPageTest() throws IOException {
 		super();
 			}
@@ -29,6 +35,7 @@ public class PricingPageTest extends TestBase {
 		initialization();
 		homePage = new HomePage();	
 		pricingPage = new PricingPage();
+		contactUsPage =new ContactUsPage();
 		
 	} 	
 
@@ -43,14 +50,22 @@ public class PricingPageTest extends TestBase {
 	@Test(priority=1)
 	public void verifyPricingPageTitle() throws IOException, InterruptedException{
 		pricingPage = homePage.clickOnPricing();
+		Thread.sleep(3000);
 		System.out.println("Title of pricingPage ==>" +	pricingPage.validatePricingPageTitle());
 		Assert.assertEquals(pricingPage.validatePricingPageTitle(), "Pricing - Detroit, Ann Arbor, Warren | Torenzo", "Pricing page titile not found");
-		TestUtil.scrollUp();
+		TestUtil.scrollUpByPixel(500);
 		Thread.sleep(3000);
-		pricingPage.clickOnTryTorenzoForFree();
+		contactUsPage = pricingPage.clickOnTryTorenzoForFree();
+		Thread.sleep(3000);
+		System.out.println("Title of Contact Us Page ==>" +contactUsPage.validateContactUsPageTitile());
+		Assert.assertEquals(contactUsPage.validateContactUsPageTitile(), "Pricing - Detroit, Ann Arbor, Warren | Torenzo", "Contact us page not foubd upon clicking on TryTorenzoForFree");			
 		System.out.println("Done");
 		
 	}
 	
+	@AfterMethod
+	public void tearDown(){
+		driver.quit();
+	}
 	
 }

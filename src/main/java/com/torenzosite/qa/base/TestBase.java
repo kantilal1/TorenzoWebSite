@@ -15,7 +15,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.torenzosite.qa.util.TestUtil;
 
-
 public class TestBase {
 
 	public static WebDriver driver;
@@ -35,27 +34,22 @@ public class TestBase {
 		}
 		
 	}
-		
-	
+			
 	public static void initialization() throws InterruptedException{
 		
 		String broweserName = prop.getProperty("browser");
-		if(broweserName.equals("chrome")){
+		if(broweserName.equals("FF")){
 			
-			System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\chromedriver_win32-1\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\FileDriver\\geckodriver.exe");
 			
 			driver = new ChromeDriver();
 		}
-		else if (broweserName.equals("FF")){
+		else if (broweserName.equals("chrome")){
 
-			System.setProperty("webdriver.gecko.driver", "E:\\SeleniumWorkSpace\\geckodriver.exe");		
-			
+			System.setProperty("webdriver.gecko.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\FileDriver\\chromedriver.exe");		
+			System.setProperty("webdriver.firefox.marionette", "false");
 			driver = new FirefoxDriver();
-			
-		
-/*			
-			System.setProperty("webdriver.gecko.driver", "/Users/username/Downloads/geckodriver");
-			WebDriver driver = new FirefoxDriver();*/
+
 		}
 
 		driver.manage().window().maximize();
@@ -63,10 +57,8 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
         driver.get(prop.getProperty("torenzoURL"));
-		//driver.get(prop.getProperty("url"));
+	//	driver.get(prop.getProperty("url1"));
 	
-
-		
 	}
 
 
