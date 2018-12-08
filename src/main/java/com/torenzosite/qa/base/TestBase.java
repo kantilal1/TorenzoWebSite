@@ -23,7 +23,7 @@ public class TestBase {
 	public TestBase() throws IOException{
 		try{
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("E:\\SeleniumWorkSpace\\torenzowebsite\\src\\main\\java\\com\\torenzosite\\qa\\config\\config.properties");
+			FileInputStream fis = new FileInputStream("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\config\\config.properties");
 		
 		prop.load(fis);
 		}catch(FileNotFoundException e){

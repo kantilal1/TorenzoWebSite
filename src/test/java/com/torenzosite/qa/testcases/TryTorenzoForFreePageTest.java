@@ -36,7 +36,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 		tryTorenzoForFreePage = new TryTorenzoForFreePage();
 		
 	} 
-	@Test(priority=0)
+	@Test(priority=21)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
@@ -44,7 +44,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 		
 	}
 	
-	@Test(priority=1)
+	@Test(priority=22)
 	public void clickOnTryTorenzoForFree() throws IOException, InterruptedException{
 	
 		tryTorenzoForFreePage = homePage.clickOnTryTorenzoForFree();

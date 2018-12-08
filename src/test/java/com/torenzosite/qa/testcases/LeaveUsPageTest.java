@@ -32,14 +32,14 @@ public class LeaveUsPageTest extends TestBase{
 		contactUsPage =new ContactUsPage();
 	} 
 	
-	@Test(priority=0)
+	@Test(priority=14)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
 		Assert.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");		 			
 	}
 	
-	@Test(priority=1)
+	@Test(priority=15)
 	public void verifyLeaveUsPageTitle() throws IOException, InterruptedException{
 		
 		leaveUsPage = homePage.ClickOnLeaveUsaMessage();
@@ -51,8 +51,10 @@ public class LeaveUsPageTest extends TestBase{
 		leaveUsPage.passPhoneNo("9552619077");
 		leaveUsPage.passMessage("Hello");
 		leaveUsPage.clickOnSubmit();	
-		Assert.assertEquals(contactUsPage.validateThankYouPageTitle(), "Thank You! - Detroit, Ann Arbor, Warren | Torenzo", "Thank Yo uPage Title not found after failing form and clicking on Submit");			
+		Thread.sleep(8000);
+		Assert.assertEquals(contactUsPage.validateThankYouPageTitle(), "Thank You! - Detroit, Ann Arbor, Warren | Torenzo", "Thank You Page Title not found after failing form and clicking on Submit");			
 		System.out.println("Done");
+		
 	}
 	@AfterMethod
 	public void tearDown(){

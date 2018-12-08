@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Torenzo]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.torenzosite.qa.testcases.HardwarePageTest">
+      <class name="com.torenzosite.qa.testcases.ContactUsPageTest">
         <methods>
-          <include name="verifyHardwarePageTitle"/>
           <include name="setUp"/>
-          <include name="verifyContactUsPage"/>
-          <include name="tearDown"/>
+          <include name="verifyContactPage"/>
           <include name="verifyHomePageTitle"/>
+          <include name="tearDown"/>
+          <include name="fillFormToConatctUs"/>
         </methods>
-      </class> <!-- com.torenzosite.qa.testcases.HardwarePageTest -->
+      </class> <!-- com.torenzosite.qa.testcases.ContactUsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Torenzo] -->

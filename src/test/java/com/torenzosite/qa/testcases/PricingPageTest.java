@@ -2,6 +2,7 @@ package com.torenzosite.qa.testcases;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.AssertJUnit;
 import java.io.IOException;
 
@@ -18,6 +19,7 @@ import com.torenzosite.qa.pages.PricingPage;
 import com.torenzosite.qa.pages.TorenzoPOSPage;
 import com.torenzosite.qa.util.TestUtil;
 
+@Listeners(com.torenzosite.qa.listener.Listener.class)
 public class PricingPageTest extends TestBase {
 
 	
@@ -39,7 +41,7 @@ public class PricingPageTest extends TestBase {
 		
 	} 	
 
-	@Test(priority=0)
+	@Test(priority=19)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
@@ -47,7 +49,7 @@ public class PricingPageTest extends TestBase {
 		
 	}
 	
-	@Test(priority=1)
+	@Test(priority=20)
 	public void verifyPricingPageTitle() throws IOException, InterruptedException{
 		pricingPage = homePage.clickOnPricing();
 		Thread.sleep(3000);

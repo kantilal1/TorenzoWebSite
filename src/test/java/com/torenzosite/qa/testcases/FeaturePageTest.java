@@ -43,7 +43,7 @@ public class FeaturePageTest extends TestBase{
 	} 	
 	
 	
-	@Test(priority=0)
+	@Test(priority=10)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
@@ -51,7 +51,7 @@ public class FeaturePageTest extends TestBase{
 		
 	}
 	
-	@Test(priority=1)
+	@Test(priority=11)
 	public void verifyFeaturesPageTitle() throws IOException, InterruptedException{
 		featuresPage = homePage.clickOnFeatures();
 		Assert.assertEquals(featuresPage.validateFeaturesPageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "FeaturePage titile not found");		 
@@ -78,7 +78,7 @@ public class FeaturePageTest extends TestBase{
 	}
 	
 	
-	@Test(priority=2)
+	@Test(priority=12)
 	public void verifyTryTorenzoForFree() throws IOException, InterruptedException{
 		featuresPage = homePage.clickOnFeatures();
 		Thread.sleep(3000);
@@ -96,7 +96,7 @@ public class FeaturePageTest extends TestBase{
 	
 	}
 	
-	@Test(priority=3)
+	@Test(priority=13)
 	public void fillFormFromFeaturePage() throws IOException, InterruptedException{
 		featuresPage = homePage.clickOnFeatures();
 		Thread.sleep(3000);

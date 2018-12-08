@@ -34,19 +34,20 @@ public class TorenzoPOSPageTest extends TestBase {
 		
 	} 
 	
-	@Test(priority=0)
+	@Test(priority=8)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
-		AssertJUnit.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");
+		Assert.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");
 		 		
 	}
 	
-	@Test(priority=1)
-	public void verifyTextFromTorenzoPOSPage() throws IOException{
+	@Test(priority=9)
+	public void verifyTextFromTorenzoPOSPage() throws IOException, InterruptedException{
 		torenzoPOSPage=homePage.clickOnTorenzoPOS();
+		Thread.sleep(3000);
 		System.out.println("TextFromTorenzoPOSPage ==>" +torenzoPOSPage.validatetextFromTorenzoPOSPage());
-		AssertJUnit.assertEquals(torenzoPOSPage.validateTorenzoPOSPageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");		 
+		Assert.assertEquals(torenzoPOSPage.validateTorenzoPOSPageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");		 
 		 System.out.println("Title of torenzopos==>" +torenzoPOSPage.validateTorenzoPOSPageTitle());
 	
 		System.out.println("hello1");

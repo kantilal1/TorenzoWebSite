@@ -38,7 +38,7 @@ public class HomePageTest extends TestBase{
 		
 	} 
 	
-	@Test(priority=0)
+	@Test(priority=1)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
@@ -46,7 +46,7 @@ public class HomePageTest extends TestBase{
 		 		
 	}
 	
-	@Test(priority=1)
+	@Test(priority=2)
 	public void verifyEmailAddreeField() throws IOException{
 		
 		homePage.passEmailAddress("sachin.patiluk@gmail.com");		
@@ -56,7 +56,7 @@ public class HomePageTest extends TestBase{
 		
 	}
 	
-	@Test(priority=2)
+	@Test(priority=3)
 	public void verifyWithEmptyEmailAddreeField() throws IOException, InterruptedException{
 		
 		homePage.passEmailAddress("");		
@@ -70,7 +70,7 @@ public class HomePageTest extends TestBase{
 	}
 	
 	
-	@Test(priority=3)
+	@Test(priority=4)
 	public void verifyWithInvalidEmailAddreeField() throws IOException, InterruptedException{
 		
 		homePage.passEmailAddress("sachini1234");		

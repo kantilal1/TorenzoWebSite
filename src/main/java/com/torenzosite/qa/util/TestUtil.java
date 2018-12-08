@@ -24,6 +24,8 @@ public class TestUtil extends TestBase{
 	public static long IMPLICIT_WAIT = 40;
 	public static String title = "";
 	
+	public static String screenshotName="";
+	
 	public static void scrollUpByPixel(int pixel){
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 'pixel')");

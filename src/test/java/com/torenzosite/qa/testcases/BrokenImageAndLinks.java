@@ -1,6 +1,7 @@
 package com.torenzosite.qa.testcases;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -33,7 +34,7 @@ public class BrokenImageAndLinks extends TestBase{
 		
 	}
 	
-	@Test
+	@Test(priority=0)
 	public void findBrokenLinkOnTorenzoMainPage() throws IOException{
 	
 	List<WebElement>linksList=driver.findElements(By.tagName("a"));
@@ -62,6 +63,12 @@ public class BrokenImageAndLinks extends TestBase{
 		
 	}
 	
+		
+	}
+	
+	@AfterMethod
+	public void tearDown(){
+		driver.close();
 		
 	}
 	

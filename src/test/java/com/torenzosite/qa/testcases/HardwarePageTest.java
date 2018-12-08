@@ -39,14 +39,14 @@ public class HardwarePageTest extends TestBase{
 			
 		} 	
 				
-		@Test(priority=0)
+		@Test(priority=16)
 		public void verifyHomePageTitle(){
 				
 			System.out.println("Title==>" +	homePage.validateHomePageTitle());
 			Assert.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");		 			
 		}
 		
-		@Test(priority=1)
+		@Test(priority=17)
 		public void verifyHardwarePageTitle() throws IOException, InterruptedException{
 			hardwarePage = homePage.clickOnHardware();
 			System.out.println("Title==>" +hardwarePage.validateHardwarePageTitle());
@@ -59,7 +59,7 @@ public class HardwarePageTest extends TestBase{
 		
 		}
 		
-		@Test(priority=2)
+		@Test(priority=18)
 		public void  verifyContactUsPage() throws InterruptedException, IOException{
 			hardwarePage = homePage.clickOnHardware();
 		//	JavascriptExecutor js = (JavascriptExecutor) driver;			

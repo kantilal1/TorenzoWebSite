@@ -10,7 +10,7 @@ import com.torenzosite.qa.base.TestBase;
 
 public class TorenzoPOSPage extends TestBase{
 	
-	@FindBy(xpath="//input[@type='A Point of Sale Solution for the Modern Restaurant']")
+	@FindBy(xpath="//h2[@class='font-36 text-center' ]//strong[text()='A Point of Sale Solution for the Modern Restaurant ']")
     WebElement 	textFromTorenzoPOSPage;
 	
 /*	@FindBy(xpath="//(@text='A Point of Sale Solution for the Modern Restaurant')")

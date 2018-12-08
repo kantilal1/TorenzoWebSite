@@ -40,14 +40,14 @@ public class ContactUsPageTest extends TestBase {
 		
 	} 
 	
-	@Test(priority=0)
+	@Test(priority=5)
 	public void verifyHomePageTitle(){			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
 		Assert.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");
 		 		
 	}
 	
-	@Test(priority=1)
+	@Test(priority=6)
 	public void verifyContactPage() throws InterruptedException, IOException{
 		Thread.sleep(3000);
 		TestUtil.scrollUpAtEndOFPage();	
@@ -57,7 +57,7 @@ public class ContactUsPageTest extends TestBase {
 		Assert.assertEquals(contactUsPage.validateContactUsPageTitile(), "Contact Us - Detroit, Ann Arbor, Warren | Torenzo", "Contact us Page is not displayed upon clicking on Contact Us from header");		
 	}
 	
-	@Test(priority=2)
+	@Test(priority=7)
 	public void fillFormToConatctUs() throws InterruptedException, IOException{
 		Thread.sleep(3000);
 		TestUtil.scrollUpAtEndOFPage();	
@@ -80,8 +80,6 @@ public class ContactUsPageTest extends TestBase {
 		System.out.println("Done");
 
 	}
-	
-	
 	
 	@AfterMethod
 	public void tearDown(){
