@@ -4,6 +4,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import static com.torenzosite.qa.pages.FeaturesPage.tryTorenzoForFree;
+import static com.torenzosite.qa.pages.TryTorenzoForFreePage.phoneNo;
+
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -16,6 +18,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.torenzosite.qa.base.TestBase;
+import com.torenzosite.qa.pages.ContactUsPage;
 import com.torenzosite.qa.pages.FeaturesPage;
 import com.torenzosite.qa.pages.HomePage;
 import com.torenzosite.qa.pages.PricingPage;
@@ -27,12 +30,13 @@ public class FeaturePageTest extends TestBase{
 	HomePage homePage;
 	FeaturesPage featuresPage;
 	TryTorenzoForFreePage tryTorenzoForFreePage;
+	ContactUsPage contactUsPage;
+	
 	public FeaturePageTest() throws IOException {
 		super();
 		
 	}
-	
-	
+		
 	@BeforeMethod
 	public void setUp() throws IOException, InterruptedException{
 		
@@ -40,9 +44,9 @@ public class FeaturePageTest extends TestBase{
 		homePage = new HomePage();	
 		featuresPage = new FeaturesPage();
 		tryTorenzoForFreePage =new TryTorenzoForFreePage ();
+		contactUsPage =new ContactUsPage();
 	} 	
-	
-	
+		
 	@Test(priority=10)
 	public void verifyHomePageTitle(){
 			
@@ -76,32 +80,42 @@ public class FeaturePageTest extends TestBase{
 		 Assert.assertEquals(featuresPage.validateScalabilityTitle(), "SCALABILITY", "SCALABILITY title not found");		 
 	
 	}
-	
-	
+		
 	@Test(priority=12)
 	public void verifyTryTorenzoForFree() throws IOException, InterruptedException{
 		featuresPage = homePage.clickOnFeatures();
 		Thread.sleep(3000);
 		TestUtil.scrollUpByPixel(500);
-		tryTorenzoForFree.click();	
-			
-		/*JavascriptExecutor js = (JavascriptExecutor) driver;
+		tryTorenzoForFree.click();				
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement element =driver.findElement(By.xpath("//a[@class='btn btn-primary btn-lg' and text()='Try Torenzo For Free']"));		
 		js.executeScript("arguments[0].scrollIntoView()", element);
-	    element.click();*/	   
-	
+	    element.click();	   
+	    Thread.sleep(3000);
 	    System.out.println("Title of Contact US page=>" + tryTorenzoForFreePage.validateTryTorenzoForFree());	
 	    
-		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today window not found upon clicking on Try Torenzo for FREE today from Feature page");
-	
+		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today window not found upon clicking on Try Torenzo for FREE today from Feature page");	
 	}
 	
 	@Test(priority=13)
+	public void closeToForm() throws IOException, InterruptedException{
+		
+		featuresPage = homePage.clickOnFeatures();
+		Thread.sleep(3000);
+		TestUtil.scrollUpByPixel(500);
+		tryTorenzoForFreePage = featuresPage.ClickOnTryTorenzoForFreePage();
+		tryTorenzoForFreePage.clickOnClose();
+		
+	}
+	
+	
+	@Test(priority=14)
 	public void fillFormFromFeaturePage() throws IOException, InterruptedException{
 		featuresPage = homePage.clickOnFeatures();
 		Thread.sleep(3000);
 		TestUtil.scrollUpByPixel(500);
-		tryTorenzoForFreePage = featuresPage.ClickOnTryTorenzoForFreePage();	   
+		tryTorenzoForFreePage = featuresPage.ClickOnTryTorenzoForFreePage();	
+		Thread.sleep(3000);
 	    System.out.println("Title of Contact US page=>" + tryTorenzoForFreePage.validateTryTorenzoForFree());	    
 		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today window not found upon clicking on Try Torenzo for FREE today from Feature page");
 		tryTorenzoForFreePage.passFirstName("Sachin");
@@ -109,12 +123,164 @@ public class FeaturePageTest extends TestBase{
 		tryTorenzoForFreePage.passBussiness("Restarant");
 		Select drpCountry = new Select(driver.findElement(By.id("input_6_7")));
 		drpCountry.selectByVisibleText("Andorra");
-		tryTorenzoForFreePage.passPhoneNo("9552619077");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].value='(222)555-4545';", phoneNo);	
 		tryTorenzoForFreePage.passEmailID("sachin.patil.uk@gmail.com");
 		tryTorenzoForFreePage.clickOnSubmit();
-		System.out.println("	===>>>	TryTorenzoForFreePageTest class Done <====");
+		Thread.sleep(3000);
+		
+		System.out.println("Sucessfull Message ==>" +contactUsPage.validateThankYouPageTitle());
+		Assert.assertEquals(contactUsPage.validateThankYouPageTitle(), "Thank You! - Detroit, Ann Arbor, Warren | Torenzo", "Thank You Page Title not found after failing form and clicking on Submit");			
+		System.out.println("Done");
 	
 	}
+	
+	@Test(priority=15)
+	public void fillFormWithEmptyData() throws IOException, InterruptedException{
+		Thread.sleep(2000);
+		featuresPage = homePage.clickOnFeatures();
+		Thread.sleep(3000);
+		TestUtil.scrollUpByPixel(500);
+		tryTorenzoForFreePage = homePage.clickOnTryTorenzoForFree();
+		Thread.sleep(2000);
+		System.out.println("Title==>" +tryTorenzoForFreePage.validateTryTorenzoForFree());
+		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today page not found");		 	
+		tryTorenzoForFreePage.passFirstName("");
+		tryTorenzoForFreePage.passLastName("");
+		tryTorenzoForFreePage.passBussiness("");	
+		Select drpCountry = new Select(driver.findElement(By.id("input_6_7")));
+		drpCountry.selectByVisibleText("Andorra");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].value='';", phoneNo);			
+		tryTorenzoForFreePage.passEmailID("");
+		tryTorenzoForFreePage.clickOnSubmit();	
+		Thread.sleep(3000);
+		System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
+		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
+		System.out.println("Done");
+		System.out.println("Validation Message ==>" +contactUsPage.getTextFromValidationMessage());
+		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "This field is required.", "Validation message is missing upon clicking on Submit with empty data");			
+		System.out.println("Done");
+
+		
+	}
+	
+	@Test(priority=17)
+	public void fillFormWithEmptyPhoneNumber() throws IOException, InterruptedException{
+		Thread.sleep(2000);
+		featuresPage = homePage.clickOnFeatures();
+		Thread.sleep(3000);
+		TestUtil.scrollUpByPixel(500);
+		tryTorenzoForFreePage = homePage.clickOnTryTorenzoForFree();
+		Thread.sleep(2000);
+		System.out.println("Title==>" +tryTorenzoForFreePage.validateTryTorenzoForFree());
+		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today page not found");		 	
+		tryTorenzoForFreePage.passFirstName("Sachin");
+		tryTorenzoForFreePage.passLastName("Patil");
+		tryTorenzoForFreePage.passBussiness("Restarant");	
+		Select drpCountry = new Select(driver.findElement(By.id("input_6_7")));
+		drpCountry.selectByVisibleText("Andorra");
+		//Passing phone number using javascript 
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].value='';", phoneNo);			
+		tryTorenzoForFreePage.passEmailID("sachin.patil.uk@gmail.com");
+		tryTorenzoForFreePage.clickOnSubmit();
+		Thread.sleep(2000);
+		System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
+		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
+		System.out.println("Done");
+		System.out.println("Validation Message ==>" +contactUsPage.getTextFromValidationMessage());
+		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "This field is required.", "Validation message is missing upon clicking on Submit with empty data");			
+		System.out.println("Done");
+		
+	}
+	
+	@Test(priority=18)
+	public void fillFormWithEmptyEmaildId() throws IOException, InterruptedException{
+		Thread.sleep(2000);
+		featuresPage = homePage.clickOnFeatures();
+		Thread.sleep(3000);
+		TestUtil.scrollUpByPixel(500);
+		tryTorenzoForFreePage = homePage.clickOnTryTorenzoForFree();
+		Thread.sleep(2000);
+		System.out.println("Title==>" +tryTorenzoForFreePage.validateTryTorenzoForFree());
+		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today page not found");		 	
+		tryTorenzoForFreePage.passFirstName("Sachin");
+		tryTorenzoForFreePage.passLastName("Patil");
+		tryTorenzoForFreePage.passBussiness("Restarant");	
+		Select drpCountry = new Select(driver.findElement(By.id("input_6_7")));
+		drpCountry.selectByVisibleText("Andorra");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].value='(222)555-4545';", phoneNo);			
+		tryTorenzoForFreePage.passEmailID("");
+		tryTorenzoForFreePage.clickOnSubmit();	
+		Thread.sleep(5000);
+		System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
+		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
+		System.out.println("Done");
+		System.out.println("Validation Message ==>" +contactUsPage.getTextFromValidationMessage());
+		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "This field is required.", "Validation message is missing upon clicking on Submit with empty data");			
+		System.out.println("Done");
+	
+	}
+	
+	@Test(priority=19)
+	public void fillFormWithEmptyBussinesName() throws IOException, InterruptedException{
+		Thread.sleep(2000);
+		featuresPage = homePage.clickOnFeatures();
+		Thread.sleep(3000);
+		TestUtil.scrollUpByPixel(500);
+		tryTorenzoForFreePage = homePage.clickOnTryTorenzoForFree();
+		Thread.sleep(2000);
+		System.out.println("Title==>" +tryTorenzoForFreePage.validateTryTorenzoForFree());
+		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today page not found");		 	
+		tryTorenzoForFreePage.passFirstName("Sachin");
+		tryTorenzoForFreePage.passLastName("Patil");
+		//tryTorenzoForFreePage.passBussiness("Torenzo");	
+		Select drpCountry = new Select(driver.findElement(By.id("input_6_7")));
+		drpCountry.selectByVisibleText("Andorra");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].value='(222)555-4545';", phoneNo);			
+		tryTorenzoForFreePage.passEmailID("");
+		tryTorenzoForFreePage.clickOnSubmit();		
+		System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
+		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
+		System.out.println("Done");
+		System.out.println("Validation Message ==>" +contactUsPage.getTextFromValidationMessage());
+		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "This field is required.", "Validation message is missing upon clicking on Submit with empty data");			
+		System.out.println("Done");
+	
+	}
+	
+
+	@Test(priority=20)
+	public void fillFormWithIncorrectEmailId() throws IOException, InterruptedException{
+		Thread.sleep(2000);
+		featuresPage = homePage.clickOnFeatures();
+		Thread.sleep(3000);
+		TestUtil.scrollUpByPixel(500);
+		tryTorenzoForFreePage = homePage.clickOnTryTorenzoForFree();
+		Thread.sleep(2000);
+		System.out.println("Title==>" +tryTorenzoForFreePage.validateTryTorenzoForFree());
+		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today page not found");		 	
+		tryTorenzoForFreePage.passFirstName("Sachin");
+		tryTorenzoForFreePage.passLastName("Patil");
+		tryTorenzoForFreePage.passBussiness("Torenzo");	
+		Select drpCountry = new Select(driver.findElement(By.id("input_6_7")));
+		drpCountry.selectByVisibleText("Andorra");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].value='(222)555-4545';", phoneNo);			
+		tryTorenzoForFreePage.passEmailID("xyz@@123");
+		tryTorenzoForFreePage.clickOnSubmit();		
+		System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
+		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
+		System.out.println("Done");
+		System.out.println("Validation Message ==>" +contactUsPage.getTextFromValidationMessage());
+		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "Please enter a valid email address.", "Validation message is missing upon clicking on Submit with empty data");			
+		System.out.println("Done");
+	
+	}
+	
 	
 	@AfterMethod
 	public void tearDown(){

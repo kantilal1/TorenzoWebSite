@@ -34,7 +34,7 @@ public class TorenzoPOSPageTest extends TestBase {
 		
 	} 
 	
-	@Test(priority=8)
+	@Test(priority=10)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
@@ -42,7 +42,7 @@ public class TorenzoPOSPageTest extends TestBase {
 		 		
 	}
 	
-	@Test(priority=9)
+	@Test(priority=11)
 	public void verifyTextFromTorenzoPOSPage() throws IOException, InterruptedException{
 		torenzoPOSPage=homePage.clickOnTorenzoPOS();
 		Thread.sleep(3000);

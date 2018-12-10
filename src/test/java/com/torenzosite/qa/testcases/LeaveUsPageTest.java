@@ -9,15 +9,19 @@ import org.testng.annotations.Test;
 
 import com.torenzosite.qa.base.TestBase;
 import com.torenzosite.qa.pages.ContactUsPage;
+import com.torenzosite.qa.pages.FeaturesPage;
 import com.torenzosite.qa.pages.HomePage;
 import com.torenzosite.qa.pages.LeaveUsPage;
 import com.torenzosite.qa.pages.TryTorenzoForFreePage;
+import com.torenzosite.qa.util.TestUtil;
 
 public class LeaveUsPageTest extends TestBase{
 
 	HomePage homePage;
 	LeaveUsPage leaveUsPage;
 	ContactUsPage contactUsPage;
+	FeaturesPage featuresPage;
+	TryTorenzoForFreePage tryTorenzoForFreePage;
 	public LeaveUsPageTest() throws IOException {
 		super();
 	
@@ -30,6 +34,8 @@ public class LeaveUsPageTest extends TestBase{
 		homePage = new HomePage();	
 		leaveUsPage = new LeaveUsPage();
 		contactUsPage =new ContactUsPage();
+		featuresPage =new FeaturesPage();
+		tryTorenzoForFreePage =new TryTorenzoForFreePage();
 	} 
 	
 	@Test(priority=14)
@@ -56,6 +62,38 @@ public class LeaveUsPageTest extends TestBase{
 		System.out.println("Done");
 		
 	}
+	
+	@Test(priority=13)
+	public void closeToForm() throws IOException, InterruptedException{
+		
+		featuresPage = homePage.clickOnFeatures();
+		Thread.sleep(3000);
+		TestUtil.scrollUpByPixel(500);
+		tryTorenzoForFreePage = featuresPage.ClickOnTryTorenzoForFreePage();
+		tryTorenzoForFreePage.clickOnClose();
+		
+	}
+	
+	@Test(priority=15)
+	public void fillFormWithEmptyDataLeaveUsMessage() throws IOException, InterruptedException{
+		
+		leaveUsPage = homePage.ClickOnLeaveUsaMessage();
+		Thread.sleep(3000);
+		System.out.println("Title==>" +leaveUsPage.validateLeaveUsMessageTitle());
+		Assert.assertEquals(leaveUsPage.validateLeaveUsMessageTitle(), "Support", "Leave Us Message Page Not not found upon clicking on Leave Us Message");		 				
+		leaveUsPage.clickOnSubmit();	
+		System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
+		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
+		System.out.println("Done");
+		System.out.println("Validation Message ==>" +contactUsPage.getTextFromValidationMessage());
+		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "This field is required.", "Validation message is missing upon clicking on Submit with empty data");			
+		System.out.println("Done");
+		
+	}
+	
+	
+	
+	
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();

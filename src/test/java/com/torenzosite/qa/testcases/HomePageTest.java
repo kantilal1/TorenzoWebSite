@@ -59,11 +59,11 @@ public class HomePageTest extends TestBase{
 	@Test(priority=3)
 	public void verifyWithEmptyEmailAddreeField() throws IOException, InterruptedException{
 		
+		System.out.println("Checking alert message and validation as keeping With Empty Email Addree Field ");
 		homePage.passEmailAddress("");		
 		homePage.ClickHereOnToTryTorenzoForFree();
 		System.out.println("AlertMessage with empty email id ==>"+tryTorenzoForFreePage.getTextFromAlertMessage());
-		System.out.println("validation message ==>"+tryTorenzoForFreePage.getTextFromValidationMessage());
-		
+		System.out.println("validation message ==>"+tryTorenzoForFreePage.getTextFromValidationMessage());		
 		Assert.assertEquals(tryTorenzoForFreePage.getTextFromValidationMessage(), "This field is required.", "Alert Message is missing with empty email id");
 		Assert.assertEquals(tryTorenzoForFreePage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing with empty email id");
 		
@@ -72,7 +72,7 @@ public class HomePageTest extends TestBase{
 	
 	@Test(priority=4)
 	public void verifyWithInvalidEmailAddreeField() throws IOException, InterruptedException{
-		
+		System.out.println("Checking alert message and validation as keeping With Envalid Email Addree Field ");
 		homePage.passEmailAddress("sachini1234");		
 		homePage.ClickHereOnToTryTorenzoForFree();
 		System.out.println("AlertMessage with empty email id ==>"+tryTorenzoForFreePage.getTextFromAlertMessage());

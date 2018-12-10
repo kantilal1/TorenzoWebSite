@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.torenzosite.qa.testcases.LeaveUsPageTest">
+      <class name="com.torenzosite.qa.testcases.FeaturePageTest">
         <methods>
-          <include name="verifyLeaveUsPageTitle"/>
+          <include name="fillFormWithIncorrectEmailId"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.torenzosite.qa.testcases.LeaveUsPageTest -->
+      </class> <!-- com.torenzosite.qa.testcases.FeaturePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Torenzo WebSite] -->

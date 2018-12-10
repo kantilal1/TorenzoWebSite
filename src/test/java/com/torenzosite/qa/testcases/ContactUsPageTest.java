@@ -71,8 +71,8 @@ public class ContactUsPageTest extends TestBase {
 		contactUsPage.passSubject("For Bussiness");
 		//TestUtil.scrollUpHorizontalORVIsibilityOFElement(message);
 		contactUsPage.passMessage("Hello Team, Hope you are all doing great");		
-	/*	JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, 500)");*/
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 500)");
 		TestUtil.scrollUpByPixel(500);
 		contactUsPage.clickOnSubmit();		
 		System.out.println("Title of Contact Us Page ==>" +contactUsPage.validateThankYouPageTitle());
@@ -81,6 +81,66 @@ public class ContactUsPageTest extends TestBase {
 
 	}
 	
+	@Test(priority=8)
+	public void fillFormToConatctUsWithEmpty() throws InterruptedException, IOException{
+		Thread.sleep(3000);
+		TestUtil.scrollUpAtEndOFPage();	
+		contactUsPage = homePage.ClickOnContactUs();	
+		Thread.sleep(3000);
+		contactUsPage.passFirstName("");
+		contactUsPage.passLastName("");
+		contactUsPage.passEmailID("");
+		contactUsPage.passPhoneNo("");
+		contactUsPage.passCompanyName("");
+		contactUsPage.passSubject("");
+		//TestUtil.scrollUpHorizontalORVIsibilityOFElement(message);
+		contactUsPage.passMessage("");		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 500)");
+		TestUtil.scrollUpByPixel(500);
+		contactUsPage.clickOnSubmit();	
+		Thread.sleep(3000);
+		TestUtil.scrollUpByPixel(500);
+		System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
+		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
+		System.out.println("Done");
+		System.out.println("Validation Message ==>" +contactUsPage.getTextFromValidationMessage());
+		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "This field is required.", "Validation message is missing upon clicking on Submit with empty data");			
+		System.out.println("Done");
+
+
+	}
+	
+	
+	@Test(priority=9)
+	public void fillFormToConatctUsWithIncorrectEmail() throws InterruptedException, IOException{
+		Thread.sleep(3000);
+		TestUtil.scrollUpAtEndOFPage();	
+		contactUsPage = homePage.ClickOnContactUs();	
+		Thread.sleep(3000);
+		contactUsPage.passFirstName("Sachin");
+		contactUsPage.passLastName("Patil");
+		contactUsPage.passEmailID("sachin.patil.uk@gmailcom");
+		contactUsPage.passPhoneNo("9978451232");
+		contactUsPage.passCompanyName("Torenzo");
+		contactUsPage.passSubject("For Bussiness");
+		//TestUtil.scrollUpHorizontalORVIsibilityOFElement(message);
+		contactUsPage.passMessage("Hello Team, Hope you are all doing great");		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 500)");
+		TestUtil.scrollUpByPixel(500);
+		contactUsPage.clickOnSubmit();		
+		TestUtil.scrollUpByPixel(500);
+		System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
+		Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
+		System.out.println("Done");
+		System.out.println("Validation Message ==>" +contactUsPage.getTextFromValidationMessage());
+		Assert.assertEquals(contactUsPage.getTextFromValidationMessage(), "Please enter a valid email address.", "Validation message is missing upon clicking on Submit with empty email id");			
+		System.out.println("Done");
+	}
+	
+	
+
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();

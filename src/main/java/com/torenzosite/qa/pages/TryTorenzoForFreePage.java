@@ -30,13 +30,16 @@ public class TryTorenzoForFreePage extends TestBase{
 	WebElement country;
 	
 	@FindBy(id = "input_6_8")
-	WebElement phoneNo;
+	public static WebElement phoneNo;
 	
 	@FindBy(id = "input_6_2")
 	WebElement emailID;
 	
 	@FindBy(xpath = "//div[@class='gform_footer top_label']//input[@id='gform_submit_button_6' and @type='submit' and @value='Submit']")
 	WebElement submit;
+	
+	@FindBy(xpath = ".//*[@id='ID-NAME']/div/div/div[1]/button")
+	WebElement close;
 	
 	//Validation and error message
 	@FindBy(xpath = "//div[@class='alert alert-error']")
@@ -102,12 +105,14 @@ public class TryTorenzoForFreePage extends TestBase{
 		
 	}
 	
-	public void passPhoneNo(String numberPass)
+	public void passPhoneNo(String phoneNumber)
 	{
-		
-		phoneNo.sendKeys(numberPass);
-		
-	}
+		 	    
+			phoneNo.sendKeys(phoneNumber);
+			
+		}
+	
+	
 	
 	public void passEmailID(String emailPass)
 	{
@@ -116,15 +121,24 @@ public class TryTorenzoForFreePage extends TestBase{
 		
 	}
 
-	public void clickOnSubmit()
+	public ContactUsPage clickOnSubmit() throws IOException
 	{
 		
-		submit.click();
+		 submit.click();
+		 return new ContactUsPage();
+		
+	}
+	
+	public void clickOnClose() throws IOException
+	{
+		
+		close.click();
+	
 		
 	}
 	
 	
-	
+
 
 }
 

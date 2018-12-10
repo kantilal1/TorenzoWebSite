@@ -19,6 +19,14 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.14.0</version>
 			</dependency>
+			
+			<dependency>
+    <groupId>com.liferay.portal</groupId>
+    <artifactId>com.liferay.portal.kernel</artifactId>
+    <version>3.42.3</version>
+    <scope>provided</scope>
+</dependency>
+			
 	<dependency>
 	    <groupId>com.sun.mail</groupId>
 	    <artifactId>javax.mail</artifactId>
