@@ -41,7 +41,7 @@ public class PricingPageTest extends TestBase {
 		
 	} 	
 
-	@Test(priority=19)
+	@Test(priority=27)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
@@ -49,7 +49,7 @@ public class PricingPageTest extends TestBase {
 		
 	}
 	
-	@Test(priority=20)
+	@Test(priority=28)
 	public void verifyPricingPageTitle() throws IOException, InterruptedException{
 		pricingPage = homePage.clickOnPricing();
 		Thread.sleep(3000);

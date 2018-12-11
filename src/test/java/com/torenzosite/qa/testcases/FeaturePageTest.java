@@ -49,7 +49,7 @@ public class FeaturePageTest extends TestBase{
 		contactUsPage =new ContactUsPage();
 	} 	
 		
-	@Test(priority=10)
+	@Test(priority=12)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
@@ -57,7 +57,7 @@ public class FeaturePageTest extends TestBase{
 		
 	}
 	
-	@Test(priority=11)
+	@Test(priority=13)
 	public void verifyFeaturesPageTitle() throws IOException, InterruptedException{
 		featuresPage = homePage.clickOnFeatures();
 		Assert.assertEquals(featuresPage.validateFeaturesPageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "FeaturePage titile not found");		 
@@ -83,7 +83,7 @@ public class FeaturePageTest extends TestBase{
 	
 	}
 		
-	@Test(priority=12)
+	@Test(priority=14)
 	public void verifyTryTorenzoForFree() throws IOException, InterruptedException{
 		featuresPage = homePage.clickOnFeatures();
 		Thread.sleep(3000);
@@ -99,7 +99,7 @@ public class FeaturePageTest extends TestBase{
 		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today window not found upon clicking on Try Torenzo for FREE today from Feature page");	
 	}
 	
-	@Test(priority=13)
+	@Test(priority=15)
 	public void closeToForm() throws IOException, InterruptedException{
 		
 		featuresPage = homePage.clickOnFeatures();
@@ -111,7 +111,7 @@ public class FeaturePageTest extends TestBase{
 	}
 	
 	
-	@Test(priority=14)
+	@Test(priority=16)
 	public void fillFormFromFeaturePage() throws IOException, InterruptedException{
 		featuresPage = homePage.clickOnFeatures();
 		Thread.sleep(3000);
@@ -137,7 +137,7 @@ public class FeaturePageTest extends TestBase{
 	
 	}
 	
-	@Test(priority=15)
+	@Test(priority=17)
 	public void fillFormWithEmptyData() throws IOException, InterruptedException{
 		Thread.sleep(2000);
 		featuresPage = homePage.clickOnFeatures();
@@ -167,7 +167,7 @@ public class FeaturePageTest extends TestBase{
 		
 	}
 	
-	@Test(priority=17)
+	@Test(priority=18)
 	public void fillFormWithEmptyPhoneNumber() throws IOException, InterruptedException{
 		Thread.sleep(2000);
 		featuresPage = homePage.clickOnFeatures();
@@ -197,7 +197,7 @@ public class FeaturePageTest extends TestBase{
 		
 	}
 	
-	@Test(priority=18)
+	@Test(priority=19)
 	public void fillFormWithEmptyEmaildId() throws IOException, InterruptedException{
 		Thread.sleep(2000);
 		featuresPage = homePage.clickOnFeatures();
@@ -226,7 +226,7 @@ public class FeaturePageTest extends TestBase{
 	
 	}
 	
-	@Test(priority=19)
+	@Test(priority=20)
 	public void fillFormWithEmptyBussinesName() throws IOException, InterruptedException{
 		Thread.sleep(2000);
 		featuresPage = homePage.clickOnFeatures();
@@ -255,7 +255,7 @@ public class FeaturePageTest extends TestBase{
 	}
 	
 
-	@Test(priority=20)
+	@Test(priority=21)
 	public void fillFormWithIncorrectEmailId() throws IOException, InterruptedException{
 		Thread.sleep(2000);
 		featuresPage = homePage.clickOnFeatures();

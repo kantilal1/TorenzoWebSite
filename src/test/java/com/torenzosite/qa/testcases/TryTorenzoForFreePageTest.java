@@ -45,7 +45,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 		
 	} 
 	
-	@Test(priority=21)
+	@Test(priority=29)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
@@ -53,7 +53,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 		
 	}
 	
-	@Test(priority=22)
+	@Test(priority=30)
 	public void clickOnTryTorenzoForFreeAndFillForm() throws IOException, InterruptedException{
 			
 		XlsReader reader = new XlsReader("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\testdata\\TorenzoWorkBook.xlsx");

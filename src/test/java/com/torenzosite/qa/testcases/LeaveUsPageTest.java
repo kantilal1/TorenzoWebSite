@@ -45,15 +45,16 @@ public class LeaveUsPageTest extends TestBase{
 		featuresPage =new FeaturesPage();
 		tryTorenzoForFreePage =new TryTorenzoForFreePage();
 	} 
-	/*
-	@Test(priority=14)
+	
+	@Test(priority=22)
 	public void verifyHomePageTitle(){
 			
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
 		Assert.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");		 			
-	}*/
+	}
 	
-	@Test(priority=15)
+	
+	@Test(priority=23)
 	public void verifyLeaveUsPageTitle() throws IOException, InterruptedException{
 		
 		XlsReader reader = new XlsReader("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\testdata\\TorenzoWorkBook.xlsx");
@@ -117,7 +118,7 @@ public class LeaveUsPageTest extends TestBase{
 					}
 						
 					driver.navigate().refresh();
-					System.out.println("	===>>>	TryTorenzoForFreePageTest class Done <====");				
+					System.out.println("rowNum==>" +rowNum);				
 		 
 		   }			
 			
@@ -125,8 +126,35 @@ public class LeaveUsPageTest extends TestBase{
 	}
 	
 	
-		
-/*	@Test(priority=13)
+	@AfterMethod
+	public void tearDown(){
+		driver.quit();
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*	
+			@Test(priority=13)
 	public void closeToForm() throws IOException, InterruptedException{
 		
 		  leaveUsPage = homePage.ClickOnLeaveUsaMessage();
@@ -137,13 +165,8 @@ public class LeaveUsPageTest extends TestBase{
 		
 			leaveUsPage.clickOnClose();
 	}
-		*/
-	
 
-	/*@AfterMethod
-	public void tearDown(){
-		driver.quit();
-	}*/
+
 	
 	
 	
@@ -151,7 +174,7 @@ public class LeaveUsPageTest extends TestBase{
 
 
 
-	/*	leaveUsPage = homePage.ClickOnLeaveUsaMessage();
+	leaveUsPage = homePage.ClickOnLeaveUsaMessage();
 		Thread.sleep(3000);
 		System.out.println("Title==>" +leaveUsPage.validateLeaveUsMessageTitle());
 		Assert.assertEquals(leaveUsPage.validateLeaveUsMessageTitle(), "Support", "Leave Us Message Page Not not found upon clicking on Leave Us Message");		 			
