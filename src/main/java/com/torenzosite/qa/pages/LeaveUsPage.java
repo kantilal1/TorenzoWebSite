@@ -33,7 +33,12 @@ public class LeaveUsPage extends TestBase{
 	@FindBy(xpath = "//h3[@id='myModalLabel' and text()='Support']")
 	WebElement support;
 
+	@FindBy(xpath = ".//*[@id='msg-modal']/div/div/div[1]/button")
+	WebElement close;
 	
+	
+	
+
 	
 	public String validateLeaveUsMessageTitle(){
 		
@@ -70,6 +75,15 @@ public class LeaveUsPage extends TestBase{
 		submit.click();
 		
 	}
+	
+	
+	public void clickOnClose()
+	{
+		
+		close.click();
+		
+	}
+	
 	
 	
 }

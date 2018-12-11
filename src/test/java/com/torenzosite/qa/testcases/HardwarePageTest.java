@@ -3,6 +3,8 @@ package com.torenzosite.qa.testcases;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
+
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -19,7 +21,7 @@ import com.torenzosite.qa.pages.FeaturesPage;
 import com.torenzosite.qa.pages.HardwarePage;
 import com.torenzosite.qa.pages.HomePage;
 import com.torenzosite.qa.util.TestUtil;
-
+@Listeners(com.torenzosite.qa.listener.Listener.class)
 public class HardwarePageTest extends TestBase{
 	
 		HomePage homePage;

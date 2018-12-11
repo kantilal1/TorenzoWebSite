@@ -3,6 +3,8 @@ package com.torenzosite.qa.testcases;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -16,7 +18,7 @@ import org.testng.annotations.Test;
 
 import com.torenzosite.qa.base.TestBase;
 import com.torenzosite.qa.pages.HomePage;
-
+@Listeners(com.torenzosite.qa.listener.Listener.class)
 public class BrokenImageAndLinks extends TestBase{
 
 	HomePage homePage;

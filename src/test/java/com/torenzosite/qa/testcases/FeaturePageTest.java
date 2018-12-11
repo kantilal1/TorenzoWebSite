@@ -3,6 +3,8 @@ package com.torenzosite.qa.testcases;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
+
 import static com.torenzosite.qa.pages.FeaturesPage.tryTorenzoForFree;
 import static com.torenzosite.qa.pages.TryTorenzoForFreePage.phoneNo;
 
@@ -24,7 +26,7 @@ import com.torenzosite.qa.pages.HomePage;
 import com.torenzosite.qa.pages.PricingPage;
 import com.torenzosite.qa.pages.TryTorenzoForFreePage;
 import com.torenzosite.qa.util.TestUtil;
-
+@Listeners(com.torenzosite.qa.listener.Listener.class)
 public class FeaturePageTest extends TestBase{
 	
 	HomePage homePage;

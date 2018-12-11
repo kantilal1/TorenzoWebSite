@@ -11,6 +11,7 @@ import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.torenzosite.qa.base.TestBase;
@@ -18,7 +19,7 @@ import com.torenzosite.qa.pages.ContactUsPage;
 import com.torenzosite.qa.pages.HomePage;
 import com.torenzosite.qa.pages.TryTorenzoForFreePage;
 import com.torenzosite.qa.util.TestUtil;
-
+@Listeners(com.torenzosite.qa.listener.Listener.class)
 public class ContactUsPageTest extends TestBase {
 
 	HomePage homePage;
@@ -87,14 +88,14 @@ public class ContactUsPageTest extends TestBase {
 		TestUtil.scrollUpAtEndOFPage();	
 		contactUsPage = homePage.ClickOnContactUs();	
 		Thread.sleep(3000);
-		contactUsPage.passFirstName("");
+	/*	contactUsPage.passFirstName("");
 		contactUsPage.passLastName("");
 		contactUsPage.passEmailID("");
 		contactUsPage.passPhoneNo("");
 		contactUsPage.passCompanyName("");
 		contactUsPage.passSubject("");
 		//TestUtil.scrollUpHorizontalORVIsibilityOFElement(message);
-		contactUsPage.passMessage("");		
+		contactUsPage.passMessage("");	*/	
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 500)");
 		TestUtil.scrollUpByPixel(500);
@@ -140,7 +141,6 @@ public class ContactUsPageTest extends TestBase {
 	}
 	
 	
-
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();

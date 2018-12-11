@@ -3,6 +3,7 @@ package com.torenzosite.qa.testcases;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.AssertJUnit;
 import java.io.IOException;
 
@@ -15,7 +16,7 @@ import com.torenzosite.qa.base.TestBase;
 import com.torenzosite.qa.pages.FeaturesPage;
 import com.torenzosite.qa.pages.HomePage;
 import com.torenzosite.qa.pages.TorenzoPOSPage;
-
+@Listeners(com.torenzosite.qa.listener.Listener.class)
 public class TorenzoPOSPageTest extends TestBase {
 
 	HomePage homePage;
