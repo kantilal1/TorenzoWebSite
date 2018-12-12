@@ -1,6 +1,7 @@
 package com.torenzosite.qa.testcases;
 
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -17,12 +18,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.torenzosite.qa.base.TestBase;
+import com.torenzosite.qa.pages.ContactUsPage;
 import com.torenzosite.qa.pages.HomePage;
+import com.torenzosite.qa.pages.TryTorenzoForFreePage;
 @Listeners(com.torenzosite.qa.listener.Listener.class)
 public class BrokenImageAndLinks extends TestBase{
 
 	HomePage homePage;
-	
+	ContactUsPage contactUsPage;
 	public BrokenImageAndLinks() throws IOException {
 		super();
 		// TODO Auto-generated constructor stub
@@ -32,9 +35,10 @@ public class BrokenImageAndLinks extends TestBase{
 	public void setUp() throws IOException, InterruptedException{
 		
 		initialization();
-		homePage = new HomePage();	
+		homePage = new HomePage();
+		contactUsPage =new ContactUsPage();
 		
-	}
+	} 
 	
 	@Test(priority=0)
 	public void findBrokenLinkOnTorenzoMainPage() throws IOException{

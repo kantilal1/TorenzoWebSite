@@ -5,7 +5,7 @@
 			<listener class-name = "com.torenzosite.qa.extentreprot.ExtentReportListener" />
 	</listeners>
 		
-		<test name ="TorenzoTest" preserve-order="true" enabled="true">
+		<test name ="TorenzoTest" preserve-order="true">
 		<classes>
 				<class name = "com.torenzosite.qa.testcases.BrokenImageAndLinks" ></class>
 				<class name =  "com.torenzosite.qa.testcases.HomePageTest" ></class>
@@ -15,7 +15,7 @@
 				<class name =  "com.torenzosite.qa.testcases.LeaveUsPageTest" ></class>
 				<class name = "com.torenzosite.qa.testcases.HardwarePageTest"></class>
 				<class name = "com.torenzosite.qa.testcases.PricingPageTest"></class>
-				<class name = "com.torenzosite.qa.testcases.TryTorenzoForFreePageTest"></class> 
+				<class name = "com.torenzosite.qa.testcases.TryTorenzoForFreePageTest"></class>
 			</classes>
 		</test>
 	</suite>
