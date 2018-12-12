@@ -22,7 +22,7 @@ public class TorenzoPOSPageTest extends TestBase {
 	HomePage homePage;
 	TorenzoPOSPage torenzoPOSPage;  
 	
-	public TorenzoPOSPageTest() throws IOException {
+	public TorenzoPOSPageTest() throws IOException, InterruptedException {
 		super();
 	}
 

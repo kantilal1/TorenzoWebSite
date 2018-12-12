@@ -27,7 +27,7 @@ public class BrokenLinksOnTorenzoPageTest extends TestBase {
      HttpURLConnection huc = null;
      int respCode = 200;
      
-	public BrokenLinksOnTorenzoPageTest() throws IOException {
+	public BrokenLinksOnTorenzoPageTest() throws IOException, InterruptedException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

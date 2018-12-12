@@ -21,7 +21,7 @@ import com.torenzosite.qa.base.TestBase;
 
 public class TakeScreenshot extends TestBase{
 
-	public TakeScreenshot() throws IOException {
+	public TakeScreenshot() throws IOException, InterruptedException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

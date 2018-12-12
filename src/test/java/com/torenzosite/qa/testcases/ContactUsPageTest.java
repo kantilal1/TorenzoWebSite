@@ -26,7 +26,7 @@ public class ContactUsPageTest extends TestBase {
 	ContactUsPage contactUsPage;
 	TryTorenzoForFreePage tryTorenzoForFreePage;
 	
-	public ContactUsPageTest() throws IOException {
+	public ContactUsPageTest() throws IOException, InterruptedException {
 		super();
 		
 	}

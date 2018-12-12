@@ -25,7 +25,7 @@ public class HomePageTest extends TestBase{
 
 	TryTorenzoForFreePage tryTorenzoForFreePage;
 		
-	public HomePageTest() throws IOException {
+	public HomePageTest() throws IOException, InterruptedException {
 		super();
 		
 	}

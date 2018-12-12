@@ -30,7 +30,7 @@ public class LeaveUsPageTest extends TestBase{
 	FeaturesPage featuresPage;
 	TryTorenzoForFreePage tryTorenzoForFreePage;
 	
-	public LeaveUsPageTest() throws IOException {
+	public LeaveUsPageTest() throws IOException, InterruptedException {
 		super();
 	
 	}

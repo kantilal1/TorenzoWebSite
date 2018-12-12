@@ -27,7 +27,7 @@ public class PricingPageTest extends TestBase {
 	PricingPage pricingPage;
 	ContactUsPage contactUsPage;
 	
-	public PricingPageTest() throws IOException {
+	public PricingPageTest() throws IOException, InterruptedException {
 		super();
 			}
 	

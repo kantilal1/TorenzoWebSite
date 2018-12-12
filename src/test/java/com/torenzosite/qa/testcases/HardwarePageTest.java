@@ -28,7 +28,7 @@ public class HardwarePageTest extends TestBase{
 		HardwarePage hardwarePage;
 		ContactUsPage contactUsPage;
 		
-		public HardwarePageTest() throws IOException{
+		public HardwarePageTest() throws IOException, InterruptedException{
 			super();
 		}
 		

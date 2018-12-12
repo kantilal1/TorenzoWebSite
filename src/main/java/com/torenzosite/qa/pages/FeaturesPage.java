@@ -44,7 +44,7 @@ public class FeaturesPage extends TestBase{
 	
 
 		
-	public FeaturesPage() throws IOException {
+	public FeaturesPage() throws IOException , InterruptedException {
 		PageFactory.initElements(driver, this);
 		
 	}
@@ -99,7 +99,7 @@ public class FeaturesPage extends TestBase{
 		
 	}
 	
-	public TryTorenzoForFreePage ClickOnTryTorenzoForFreePage() throws IOException{
+	public TryTorenzoForFreePage ClickOnTryTorenzoForFreePage() throws IOException, InterruptedException{
 		
 		tryTorenzoForFree.click();
 		return new TryTorenzoForFreePage();

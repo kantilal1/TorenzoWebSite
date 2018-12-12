@@ -26,7 +26,7 @@ public class BrokenImageAndLinks extends TestBase{
 
 	HomePage homePage;
 	ContactUsPage contactUsPage;
-	public BrokenImageAndLinks() throws IOException {
+	public BrokenImageAndLinks() throws IOException, InterruptedException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

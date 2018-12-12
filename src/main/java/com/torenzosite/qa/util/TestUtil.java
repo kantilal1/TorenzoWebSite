@@ -15,7 +15,7 @@ import com.torenzosite.qa.base.TestBase;
 
 public class TestUtil extends TestBase{
 	
-	public TestUtil() throws IOException {
+	public TestUtil() throws IOException, InterruptedException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

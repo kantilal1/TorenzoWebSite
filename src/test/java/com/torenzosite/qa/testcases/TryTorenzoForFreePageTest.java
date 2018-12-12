@@ -29,7 +29,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	TryTorenzoForFreePage tryTorenzoForFreePage;
 	ContactUsPage contactUsPage;
 	
-	public TryTorenzoForFreePageTest() throws IOException {
+	public TryTorenzoForFreePageTest() throws IOException, InterruptedException {
 		super();
 		
 	}

@@ -20,7 +20,7 @@ public class TorenzoPOSPage extends TestBase{
 	@FindBy(xpath = "//a[contains(text(),'POINT OF SALE']")
 	WebElement PointsOfSale;
 	
-	public TorenzoPOSPage() throws IOException {
+	public TorenzoPOSPage() throws IOException, InterruptedException {
 		PageFactory.initElements(driver, this);
 		
 	}

@@ -10,7 +10,7 @@ import com.torenzosite.qa.base.TestBase;
 
 public class LeaveUsPage extends TestBase{
 
-	public LeaveUsPage() throws IOException {
+	public LeaveUsPage() throws IOException, InterruptedException {
 		PageFactory.initElements(driver, this);
 	}
 	

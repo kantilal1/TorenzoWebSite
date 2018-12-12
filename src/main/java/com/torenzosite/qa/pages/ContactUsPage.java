@@ -43,7 +43,7 @@ public class ContactUsPage extends TestBase {
 	@FindBy(xpath = "//div[@class='gfield_description validation_message']")
 	WebElement validationMessage;
 		
-	public ContactUsPage() throws IOException{
+	public ContactUsPage() throws IOException, InterruptedException{
 		PageFactory.initElements(driver, this);
 	}
 	

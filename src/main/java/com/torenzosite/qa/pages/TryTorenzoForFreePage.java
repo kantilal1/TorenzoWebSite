@@ -49,7 +49,7 @@ public class TryTorenzoForFreePage extends TestBase{
 	WebElement validationMessage;
 	
 	
-	public TryTorenzoForFreePage() throws IOException {
+	public TryTorenzoForFreePage() throws IOException, InterruptedException {
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -121,7 +121,7 @@ public class TryTorenzoForFreePage extends TestBase{
 		
 	}
 
-	public ContactUsPage clickOnSubmit() throws IOException
+	public ContactUsPage clickOnSubmit() throws IOException, InterruptedException
 	{
 		
 		 submit.click();

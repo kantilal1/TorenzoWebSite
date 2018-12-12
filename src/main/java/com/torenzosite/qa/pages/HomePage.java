@@ -54,7 +54,7 @@ public class HomePage extends TestBase {
 		
 
 
-	public HomePage() throws IOException{
+	public HomePage() throws IOException, InterruptedException{
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -64,39 +64,39 @@ public class HomePage extends TestBase {
 			return driver.getTitle();
 		}	
 		
-		public TorenzoPOSPage clickOnTorenzoPOS() throws IOException{
+		public TorenzoPOSPage clickOnTorenzoPOS() throws IOException, InterruptedException{
 			torenzoPOS.click();
 			return new TorenzoPOSPage();
 			
 			
 		}
 		
-		public FeaturesPage clickOnFeatures() throws IOException{
+		public FeaturesPage clickOnFeatures() throws IOException, InterruptedException{
 			features.click();
 			return new FeaturesPage();
 			
 		}
 		
-		public HardwarePage clickOnHardware() throws IOException{
+		public HardwarePage clickOnHardware() throws IOException, InterruptedException{
 			hardware.click();
 			return new HardwarePage();
 			
 		}
 			
 	
-		public PricingPage clickOnPricing() throws IOException{
+		public PricingPage clickOnPricing() throws IOException, InterruptedException{
 			pricing.click();
 			return new PricingPage();
 			
 		}
 	
-		public TryTorenzoForFreePage clickOnTryTorenzoForFree() throws IOException{
+		public TryTorenzoForFreePage clickOnTryTorenzoForFree() throws IOException, InterruptedException{
 			tryTorenzoForFree.click();
 			return new TryTorenzoForFreePage();
 			
 		}
 		
-		public AboutUsPage clickOnAboutUs() throws IOException{
+		public AboutUsPage clickOnAboutUs() throws IOException, InterruptedException{
 			aboutUs.click();
 			return new AboutUsPage();
 			
@@ -115,7 +115,7 @@ public class HomePage extends TestBase {
 			
 		}
 		
-		public LeaveUsPage ClickOnLeaveUsaMessage() throws IOException{
+		public LeaveUsPage ClickOnLeaveUsaMessage() throws IOException, InterruptedException{
 			
 			LeaveUsaMessage.click();
 			
@@ -135,13 +135,13 @@ public class HomePage extends TestBase {
 			
 		}
 		
-		public HomePage ClickOnHome() throws IOException{
+		public HomePage ClickOnHome() throws IOException, InterruptedException{
 			home.click();
              return new HomePage();	
 			
 		}
 		
-		public ContactUsPage ClickOnContactUs() throws IOException{
+		public ContactUsPage ClickOnContactUs() throws IOException, InterruptedException{
 			contactUs.click();
 			return new ContactUsPage();
 	

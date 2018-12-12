@@ -22,7 +22,7 @@ import com.torenzosite.qa.pages.TryTorenzoForFreePage;
 
 public class RebiqueCCTest extends TestBase {
 
-	public RebiqueCCTest() throws IOException {
+	public RebiqueCCTest() throws IOException, InterruptedException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

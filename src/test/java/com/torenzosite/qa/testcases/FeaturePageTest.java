@@ -34,7 +34,7 @@ public class FeaturePageTest extends TestBase{
 	TryTorenzoForFreePage tryTorenzoForFreePage;
 	ContactUsPage contactUsPage;
 	
-	public FeaturePageTest() throws IOException {
+	public FeaturePageTest() throws IOException, InterruptedException {
 		super();
 		
 	}

@@ -1,3 +1,4 @@
+
 package com.torenzosite.qa.pages;
 
 import java.io.IOException;
@@ -19,7 +20,7 @@ public class HardwarePage extends TestBase {
 	WebElement contactUsToday;
 	
 	
-	public HardwarePage() throws IOException {
+	public HardwarePage() throws IOException, InterruptedException {
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -28,13 +29,13 @@ public class HardwarePage extends TestBase {
 		return driver.getTitle();
 	}
 	
-	public ContactUsPage clickOnTryTorenzoForFree() throws IOException{
+	public ContactUsPage clickOnTryTorenzoForFree() throws IOException, InterruptedException{
 		
 		tryTorenzoForFree.click();
 		return new ContactUsPage();
 	}
 	
-	public ContactUsPage clickOnContactUsToday() throws IOException{
+	public ContactUsPage clickOnContactUsToday() throws IOException, InterruptedException{
 		contactUsToday.click();
 		return new ContactUsPage();
 	}
