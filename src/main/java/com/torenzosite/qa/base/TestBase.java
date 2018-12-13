@@ -23,11 +23,7 @@ public class TestBase {
 	public TestBase() throws IOException, InterruptedException{
 		try{
 			prop = new Properties();
-			Thread.sleep(5000);
-			System.out.println("File 1");
 			FileInputStream fis = new FileInputStream("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\config\\config.properties");
-			System.out.println("File 2");
-			Thread.sleep(5000);
 		prop.load(fis);
 		}catch(FileNotFoundException e){
 			e.printStackTrace();		

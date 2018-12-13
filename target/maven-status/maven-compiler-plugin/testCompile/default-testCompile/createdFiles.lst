@@ -1,0 +1,11 @@
+com\torenzosite\qa\testcases\HardwarePageTest.class
+com\torenzosite\qa\testcases\LeaveUsPageTest.class
+com\torenzosite\qa\testcases\TorenzoPOSPageTest.class
+com\torenzosite\qa\testcases\BrokenLinksOnTorenzoPageTest.class
+com\torenzosite\qa\testcases\FeaturePageTest.class
+com\torenzosite\qa\testcases\BrokenImageAndLinks.class
+com\torenzosite\qa\testcases\RebiqueCCTest.class
+com\torenzosite\qa\testcases\TryTorenzoForFreePageTest.class
+com\torenzosite\qa\testcases\HomePageTest.class
+com\torenzosite\qa\testcases\ContactUsPageTest.class
+com\torenzosite\qa\testcases\PricingPageTest.class

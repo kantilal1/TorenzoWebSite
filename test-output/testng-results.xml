@@ -1,158 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
     <line>
       <![CDATA[Before executing suite at the begin Torenzo WebSite]]>
     </line>
     <line>
-      <![CDATA[Before executing test method once onlyTorenzoTest]]>
+      <![CDATA[Before executing test method once onlyDefault test]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : BrokenImageAndLinks.setUp]]>
+      <![CDATA[About to begin executing following method : TryTorenzoForFreePageTest.setUp]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : BrokenImageAndLinks.setUp]]>
+      <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.setUp]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage]]>
+      <![CDATA[About to begin executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage]]>
+      <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : BrokenImageAndLinks.tearDown]]>
+      <![CDATA[About to begin executing following method : TryTorenzoForFreePageTest.tearDown]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : BrokenImageAndLinks.tearDown]]>
+      <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.tearDown]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : HomePageTest.setUp]]>
+      <![CDATA[About to begin executing following method : TryTorenzoForFreePageTest.setUp]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : HomePageTest.setUp]]>
+      <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.setUp]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : HomePageTest.verifyHomePageTitle]]>
+      <![CDATA[About to begin executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : HomePageTest.verifyHomePageTitle]]>
+      <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : HomePageTest.tearDown]]>
+      <![CDATA[About to begin executing following method : TryTorenzoForFreePageTest.tearDown]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : HomePageTest.tearDown]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ContactUsPageTest.setUp]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ContactUsPageTest.setUp]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ContactUsPageTest.verifyHomePageTitle]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ContactUsPageTest.verifyHomePageTitle]]>
-    </line>
-    <line>
-      <![CDATA[About to begin executing following method : ContactUsPageTest.tearDown]]>
-    </line>
-    <line>
-      <![CDATA[Completed executing following method : ContactUsPageTest.tearDown]]>
+      <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.tearDown]]>
     </line>
   </reporter-output>
-  <suite name="Torenzo WebSite" duration-ms="127541" started-at="2018-12-12T05:51:42Z" finished-at="2018-12-12T05:53:50Z">
+  <suite name="Torenzo WebSite" duration-ms="369442" started-at="2018-12-13T11:29:51Z" finished-at="2018-12-13T11:36:01Z">
     <groups>
     </groups>
-    <test name="TorenzoTest" duration-ms="127541" started-at="2018-12-12T05:51:42Z" finished-at="2018-12-12T05:53:50Z">
-      <class name="com.torenzosite.qa.testcases.BrokenImageAndLinks">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.BrokenImageAndLinks@4cf777e8]" name="setUp" is-config="true" duration-ms="48088" started-at="2018-12-12T05:51:43Z" finished-at="2018-12-12T05:52:31Z">
+    <test name="Default test" duration-ms="369442" started-at="2018-12-13T11:29:51Z" finished-at="2018-12-13T11:36:01Z">
+      <class name="com.torenzosite.qa.testcases.TryTorenzoForFreePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@4cf777e8]" name="setUp" is-config="true" duration-ms="67978" started-at="2018-12-13T11:29:51Z" finished-at="2018-12-13T11:30:59Z">
           <reporter-output>
             <line>
-              <![CDATA[Completed executing following method : BrokenImageAndLinks.setUp]]>
+              <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.setUp]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="findBrokenLinkOnTorenzoMainPage()[pri:0, instance:com.torenzosite.qa.testcases.BrokenImageAndLinks@4cf777e8]" name="findBrokenLinkOnTorenzoMainPage" duration-ms="24694" started-at="2018-12-12T05:52:31Z" finished-at="2018-12-12T05:52:55Z">
+        <test-method status="PASS" signature="verifyHomePageTitle()[pri:29, instance:com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@4cf777e8]" name="verifyHomePageTitle" duration-ms="217" started-at="2018-12-13T11:30:59Z" finished-at="2018-12-13T11:31:00Z">
           <reporter-output>
             <line>
-              <![CDATA[About to begin executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage]]>
+              <![CDATA[About to begin executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle]]>
             </line>
             <line>
-              <![CDATA[Completed executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage]]>
+              <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle]]>
             </line>
             <line>
-              <![CDATA[About to begin executing following method : BrokenImageAndLinks.tearDown]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- findBrokenLinkOnTorenzoMainPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.BrokenImageAndLinks@4cf777e8]" name="tearDown" is-config="true" duration-ms="762" started-at="2018-12-12T05:52:58Z" finished-at="2018-12-12T05:52:59Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : BrokenImageAndLinks.tearDown]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.torenzosite.qa.testcases.BrokenImageAndLinks -->
-      <class name="com.torenzosite.qa.testcases.ContactUsPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.ContactUsPageTest@3fee9989]" name="setUp" is-config="true" duration-ms="20277" started-at="2018-12-12T05:53:23Z" finished-at="2018-12-12T05:53:43Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Completed executing following method : ContactUsPageTest.setUp]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyHomePageTitle()[pri:0, instance:com.torenzosite.qa.testcases.ContactUsPageTest@3fee9989]" name="verifyHomePageTitle" duration-ms="494" started-at="2018-12-12T05:53:43Z" finished-at="2018-12-12T05:53:44Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ContactUsPageTest.verifyHomePageTitle]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ContactUsPageTest.verifyHomePageTitle]]>
-            </line>
-            <line>
-              <![CDATA[About to begin executing following method : ContactUsPageTest.tearDown]]>
+              <![CDATA[About to begin executing following method : TryTorenzoForFreePageTest.tearDown]]>
             </line>
           </reporter-output>
         </test-method> <!-- verifyHomePageTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.ContactUsPageTest@3fee9989]" name="tearDown" is-config="true" duration-ms="3572" started-at="2018-12-12T05:53:46Z" finished-at="2018-12-12T05:53:50Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@4cf777e8]" name="tearDown" is-config="true" duration-ms="436" started-at="2018-12-13T11:31:03Z" finished-at="2018-12-13T11:31:03Z">
           <reporter-output>
             <line>
-              <![CDATA[Completed executing following method : ContactUsPageTest.tearDown]]>
+              <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.tearDown]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.torenzosite.qa.testcases.ContactUsPageTest -->
-      <class name="com.torenzosite.qa.testcases.HomePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2f686d1f]" name="setUp" is-config="true" duration-ms="20130" started-at="2018-12-12T05:52:59Z" finished-at="2018-12-12T05:53:19Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@4cf777e8]" name="setUp" is-config="true" duration-ms="53377" started-at="2018-12-13T11:31:03Z" finished-at="2018-12-13T11:31:56Z">
           <reporter-output>
             <line>
-              <![CDATA[Completed executing following method : HomePageTest.setUp]]>
+              <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.setUp]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyHomePageTitle()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2f686d1f]" name="verifyHomePageTitle" duration-ms="465" started-at="2018-12-12T05:53:19Z" finished-at="2018-12-12T05:53:20Z">
+        <test-method status="FAIL" signature="clickOnTryTorenzoForFreeAndFillForm()[pri:30, instance:com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@4cf777e8]" name="clickOnTryTorenzoForFreeAndFillForm" duration-ms="241546" started-at="2018-12-13T11:31:56Z" finished-at="2018-12-13T11:35:58Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Validation message is missing upon clicking on Submit with empty data expected [This field is required.] but found [This field is required. Please enter the first and last name.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Validation message is missing upon clicking on Submit with empty data expected [This field is required.] but found [This field is required. Please enter the first and last name.]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm(TryTorenzoForFreePageTest.java:125)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[About to begin executing following method : HomePageTest.verifyHomePageTitle]]>
+              <![CDATA[About to begin executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm]]>
             </line>
             <line>
-              <![CDATA[Completed executing following method : HomePageTest.verifyHomePageTitle]]>
+              <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm]]>
             </line>
             <line>
-              <![CDATA[About to begin executing following method : HomePageTest.tearDown]]>
+              <![CDATA[About to begin executing following method : TryTorenzoForFreePageTest.tearDown]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verifyHomePageTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.HomePageTest@2f686d1f]" name="tearDown" is-config="true" duration-ms="561" started-at="2018-12-12T05:53:22Z" finished-at="2018-12-12T05:53:23Z">
+        </test-method> <!-- clickOnTryTorenzoForFreeAndFillForm -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@4cf777e8]" name="tearDown" is-config="true" duration-ms="1344" started-at="2018-12-13T11:35:59Z" finished-at="2018-12-13T11:36:01Z">
           <reporter-output>
             <line>
-              <![CDATA[Completed executing following method : HomePageTest.tearDown]]>
+              <![CDATA[Completed executing following method : TryTorenzoForFreePageTest.tearDown]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.torenzosite.qa.testcases.HomePageTest -->
-    </test> <!-- TorenzoTest -->
+      </class> <!-- com.torenzosite.qa.testcases.TryTorenzoForFreePageTest -->
+    </test> <!-- Default test -->
   </suite> <!-- Torenzo WebSite -->
 </testng-results>

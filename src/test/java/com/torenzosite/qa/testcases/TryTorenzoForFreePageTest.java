@@ -83,27 +83,32 @@ public class TryTorenzoForFreePageTest extends TestBase {
 		                   
 		          System.out.println("Title==>" +tryTorenzoForFreePage.validateTryTorenzoForFree());
 					Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today page not found");		 	
-					Thread.sleep(5000);
+					Thread.sleep(8000);
 					tryTorenzoForFreePage.passFirstName(FirstName);
+					Thread.sleep(2000);
 					tryTorenzoForFreePage.passLastName(LastName);
+					Thread.sleep(2000);
 					tryTorenzoForFreePage.passBussiness(BussinessName);	
+					Thread.sleep(2000);
 					Select drpCountry = new Select(driver.findElement(By.id("input_6_7")));
 					drpCountry.selectByVisibleText(State);
+					Thread.sleep(2000);
 					JavascriptExecutor jse = (JavascriptExecutor)driver;
 					System.out.println("Phone==>" +Phone);
 					
 					System.out.println("rowNum==>" +rowNum);
 					if(rowNum==3 || rowNum==4){
-						
+						Thread.sleep(2000);
 						jse.executeScript("arguments[0].value= '';", phoneNo);	
 						
 					}
 					else{
-						
+						Thread.sleep(2000);
 						jse.executeScript("arguments[0].value= '(222)555-4545';", phoneNo);	
 					}
-							
+					Thread.sleep(2000);		
 					tryTorenzoForFreePage.passEmailID(Email);
+			
 					tryTorenzoForFreePage.clickOnSubmit();
 					Thread.sleep(3000);
 					if(rowNum==2){
@@ -111,7 +116,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 						Assert.assertEquals(contactUsPage.validateThankYouPageTitle(), "Thank You! - Detroit, Ann Arbor, Warren | Torenzo", "Thank You Page Title not found after failing form and clicking on Submit");						   
 						
 					}
-					else if(rowNum==3 || rowNum==4 || rowNum==5 || rowNum==6){
+					else if(rowNum==3 || rowNum==5 || rowNum==6){
 						Thread.sleep(3000);
 						System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());
 						Assert.assertEquals(contactUsPage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing as keeping all field empty");			
@@ -122,6 +127,12 @@ public class TryTorenzoForFreePageTest extends TestBase {
 						tryTorenzoForFreePage.clickOnClose();
 					}
 					
+					else if(rowNum==4){
+						
+						
+						
+						
+					}
 					else if(rowNum==7){
 						
 						System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());

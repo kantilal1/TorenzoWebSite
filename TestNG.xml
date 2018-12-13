@@ -1,10 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Torenzo WebSite" verbose="1" >
-		
+<suite name="Torenzo WebSite" verbose="1" >		
 	<listeners>		
 			<listener class-name = "com.torenzosite.qa.extentreprot.ExtentReportListener" />
 	</listeners>
-		
 		<test name ="TorenzoTest" preserve-order="true">
 		<classes>
 				<class name = "com.torenzosite.qa.testcases.BrokenImageAndLinks" ></class>
@@ -19,6 +17,7 @@
 			</classes>
 		</test>
 	</suite>
+	
 	
 	
 	

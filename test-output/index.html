@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Torenzo_WebSite">
-              <span class="suite-name border-passed">Torenzo WebSite</span>
+              <span class="suite-name border-failed">Torenzo WebSite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Torenzo_WebSite">
-                    <span>E:\SeleniumWorkSpace\torenzowebsite\TorenzoWebSite\TestNG.xml</span>
+                    <span>C:\Users\Sachin\AppData\Local\Temp\testng-eclipse-1857966524\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Torenzo_WebSite" class="hide-methods failed suite-Torenzo_WebSite"> (hide)</a> <!-- hide-methods failed suite-Torenzo_WebSite -->
+                      <a href="#" panel-name="suite-Torenzo_WebSite" class="show-methods failed suite-Torenzo_WebSite"> (show)</a> <!-- show-methods failed suite-Torenzo_WebSite -->
+                    </span>
+                    <div class="method-list-content failed suite-Torenzo_WebSite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.torenzosite.qa.testcases.TryTorenzoForFreePageTest" hash-for-method="clickOnTryTorenzoForFreeAndFillForm">clickOnTryTorenzoForFreeAndFillForm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Torenzo_WebSite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +116,7 @@
                     <div class="method-list-content passed suite-Torenzo_WebSite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.torenzosite.qa.testcases.BrokenImageAndLinks" hash-for-method="findBrokenLinkOnTorenzoMainPage">findBrokenLinkOnTorenzoMainPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.torenzosite.qa.testcases.ContactUsPageTest" hash-for-method="verifyHomePageTitle">verifyHomePageTitle</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.torenzosite.qa.testcases.HomePageTest" hash-for-method="verifyHomePageTitle">verifyHomePageTitle</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.torenzosite.qa.testcases.TryTorenzoForFreePageTest" hash-for-method="verifyHomePageTitle">verifyHomePageTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Torenzo_WebSite -->
@@ -127,40 +131,59 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Torenzo_WebSite" class="panel Torenzo_WebSite">
-          <div class="suite-Torenzo_WebSite-class-passed">
+          <div class="suite-Torenzo_WebSite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.torenzosite.qa.testcases.ContactUsPageTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.torenzosite.qa.testcases.TryTorenzoForFreePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyHomePageTitle">
-                  </a> <!-- verifyHomePageTitle -->
-                  <span class="method-name">verifyHomePageTitle</span>
+                  <a name="clickOnTryTorenzoForFreeAndFillForm">
+                  </a> <!-- clickOnTryTorenzoForFreeAndFillForm -->
+                  <span class="method-name">clickOnTryTorenzoForFreeAndFillForm</span>
+                  <div class="stack-trace">java.lang.AssertionError: Validation message is missing upon clicking on Submit with empty data expected [This field is required.] but found [This field is required. Please enter the first and last name.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm(TryTorenzoForFreePageTest.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+          </div> <!-- suite-Torenzo_WebSite-class-failed -->
           <div class="suite-Torenzo_WebSite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.torenzosite.qa.testcases.BrokenImageAndLinks</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="findBrokenLinkOnTorenzoMainPage">
-                  </a> <!-- findBrokenLinkOnTorenzoMainPage -->
-                  <span class="method-name">findBrokenLinkOnTorenzoMainPage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Torenzo_WebSite-class-passed -->
-          <div class="suite-Torenzo_WebSite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.torenzosite.qa.testcases.HomePageTest</span>
+              <span class="class-name">com.torenzosite.qa.testcases.TryTorenzoForFreePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -175,7 +198,7 @@
         </div> <!-- panel Torenzo_WebSite -->
         <div panel-name="test-xml-Torenzo_WebSite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\SeleniumWorkSpace\torenzowebsite\TorenzoWebSite\TestNG.xml</span>
+            <span class="header-content">C:\Users\Sachin\AppData\Local\Temp\testng-eclipse-1857966524\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -185,13 +208,11 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.torenzosite.qa.extentreprot.ExtentReportListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;TorenzoTest&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.torenzosite.qa.testcases.BrokenImageAndLinks&quot;/&gt;
-      &lt;class name=&quot;com.torenzosite.qa.testcases.HomePageTest&quot;/&gt;
-      &lt;class name=&quot;com.torenzosite.qa.testcases.ContactUsPageTest&quot;/&gt;
+      &lt;class name=&quot;com.torenzosite.qa.testcases.TryTorenzoForFreePageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TorenzoTest --&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Torenzo WebSite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -203,7 +224,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TorenzoTest (3 classes)</span>
+                <span class="test-name">Default test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -229,24 +250,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'findBrokenLinkOnTorenzoMainPage')
-data.setCell(0, 2, 'com.torenzosite.qa.testcases.BrokenImageAndLinks')
-data.setCell(0, 3, 24694);
+data.setCell(0, 1, 'clickOnTryTorenzoForFreeAndFillForm')
+data.setCell(0, 2, 'com.torenzosite.qa.testcases.TryTorenzoForFreePageTest')
+data.setCell(0, 3, 241546);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyHomePageTitle')
-data.setCell(1, 2, 'com.torenzosite.qa.testcases.ContactUsPageTest')
-data.setCell(1, 3, 494);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyHomePageTitle')
-data.setCell(2, 2, 'com.torenzosite.qa.testcases.HomePageTest')
-data.setCell(2, 3, 465);
+data.setCell(1, 2, 'com.torenzosite.qa.testcases.TryTorenzoForFreePageTest')
+data.setCell(1, 3, 217);
 window.suiteTableData['Torenzo_WebSite']= { tableData: data, tableDiv: 'times-div-Torenzo_WebSite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Torenzo_WebSite">
               </div> <!-- times-div-Torenzo_WebSite -->
             </div> <!-- times-div -->
@@ -258,27 +275,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">findBrokenLinkOnTorenzoMainPage</span>
+              <span class="reporter-method-name">verifyHomePageTitle</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">About to begin executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage</span>
-                <span class="reporter-method-output">Completed executing following method : BrokenImageAndLinks.findBrokenLinkOnTorenzoMainPage</span>
-                <span class="reporter-method-output">About to begin executing following method : BrokenImageAndLinks.tearDown</span>
+                <span class="reporter-method-output">About to begin executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle</span>
+                <span class="reporter-method-output">Completed executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle</span>
+                <span class="reporter-method-output">About to begin executing following method : TryTorenzoForFreePageTest.tearDown</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyHomePageTitle</span>
+              <span class="reporter-method-name">clickOnTryTorenzoForFreeAndFillForm</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">About to begin executing following method : ContactUsPageTest.verifyHomePageTitle</span>
-                <span class="reporter-method-output">Completed executing following method : ContactUsPageTest.verifyHomePageTitle</span>
-                <span class="reporter-method-output">About to begin executing following method : ContactUsPageTest.tearDown</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyHomePageTitle</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">About to begin executing following method : HomePageTest.verifyHomePageTitle</span>
-                <span class="reporter-method-output">Completed executing following method : HomePageTest.verifyHomePageTitle</span>
-                <span class="reporter-method-output">About to begin executing following method : HomePageTest.tearDown</span>
+                <span class="reporter-method-output">About to begin executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm</span>
+                <span class="reporter-method-output">Completed executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm</span>
+                <span class="reporter-method-output">About to begin executing following method : TryTorenzoForFreePageTest.tearDown</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -296,48 +305,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.torenzosite.qa.testcases.BrokenImageAndLinks</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.torenzosite.qa.testcases.TryTorenzoForFreePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">findBrokenLinkOnTorenzoMainPage</span>
-                <span class="method-start">48089 ms</span>
+                <span class="method-name">verifyHomePageTitle</span>
+                <span class="method-start">67981 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">75770 ms</span>
+                <span class="method-start">71093 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.torenzosite.qa.testcases.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">76535 ms</span>
+                <span class="method-start">71531 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyHomePageTitle</span>
-                <span class="method-start">96665 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">clickOnTryTorenzoForFreeAndFillForm</span>
+                <span class="method-start">124909 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">99799 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.torenzosite.qa.testcases.ContactUsPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">100361 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyHomePageTitle</span>
-                <span class="method-start">120639 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">123831 ms</span>
+                <span class="method-start">367978 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -89,10 +89,10 @@ public class FeaturePageTest extends TestBase{
 		Thread.sleep(3000);
 		TestUtil.scrollUpByPixel(500);
 		tryTorenzoForFree.click();				
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		/*JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement element =driver.findElement(By.xpath("//a[@class='btn btn-primary btn-lg' and text()='Try Torenzo For Free']"));		
 		js.executeScript("arguments[0].scrollIntoView()", element);
-	    element.click();	   
+	    element.click();	   */
 	    Thread.sleep(3000);
 	    System.out.println("Title of Contact US page=>" + tryTorenzoForFreePage.validateTryTorenzoForFree());	
 	    

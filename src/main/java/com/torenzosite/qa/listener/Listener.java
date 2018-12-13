@@ -15,15 +15,12 @@ import com.torenzosite.qa.util.TakeScreenshot;
 
 public class Listener implements ITestListener, ISuiteListener, IInvokedMethodListener, IExecutionListener{
 
-
 	// This belongs to ISuiteListener and will execute before the Suite start
 	public void onStart(ISuite arg0) {
 
 		Reporter.log("Before executing suite at the begin " + arg0.getName(), true);
 		
-
 	}
-
 	// This belongs to ISuiteListener and will execute, once the Suite is finished
 
 	public void onFinish(ISuite arg0) {
@@ -55,7 +52,7 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 	
 		try{
 			
-			TakeScreenshot.takeScreenshot();
+			//TakeScreenshot.takeScreenshot();
 			System.out.println("Screenshot is captured for pass TC");
 			
 			System.out.println("Printed pass test case name is =>" +arg0);	
@@ -72,9 +69,7 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 
 	public void onTestFailure(ITestResult arg0) {
 
-		// This is calling the printTestResults method
-	
-			
+		// This is calling the printTestResults method		
 		try{
 			
 			TakeScreenshot.takeScreenshot();
@@ -89,7 +84,6 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 	    }
 
 	
-
 	   }
 
 	// This belongs to ITestListener and will execute before the main test start (@Test)
