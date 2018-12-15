@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 13 16:59:51 IST 2018</td>
+<td>Started on:</td><td>Sat Dec 15 13:37:48 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>369 seconds (369442 ms)</td>
+<tr><td>Total time:</td><td>536 seconds (536911 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,14 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm()'><b>clickOnTryTorenzoForFreeAndFillForm</b><br>Test class: com.torenzosite.qa.testcases.TryTorenzoForFreePageTest<br/>
-<a href="#Output-1080476785" onClick='toggleBox("Output-1080476785", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithEmptyPhoneNumber()'><b>fillFormWithEmptyPhoneNumber</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-102103410" onClick='toggleBox("Output-102103410", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1080476785" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1080476785">
-About to begin executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm<br/>
-Completed executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm<br/>
-About to begin executing following method : TryTorenzoForFreePageTest.tearDown<br/>
+<a href="#Output-102103410" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-102103410">
+About to begin executing following method : FeaturePageTest.fillFormWithEmptyPhoneNumber<br/>
+Completed executing following method : FeaturePageTest.fillFormWithEmptyPhoneNumber<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
 </div>
 </td>
 <td><div><pre>java.lang.AssertionError: Validation message is missing upon clicking on Submit with empty data expected [This field is required.] but found [This field is required. Please enter the first and last name.]
@@ -91,7 +91,7 @@ About to begin executing following method : TryTorenzoForFreePageTest.tearDown<b
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm(TryTorenzoForFreePageTest.java:125)
+	at com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithEmptyPhoneNumber(FeaturePageTest.java:195)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -117,14 +117,14 @@ About to begin executing following method : TryTorenzoForFreePageTest.tearDown<b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1080476785", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1080476785'><pre>java.lang.AssertionError: Validation message is missing upon clicking on Submit with empty data expected [This field is required.] but found [This field is required. Please enter the first and last name.]
+</pre></div><a href='#' onClick='toggleBox("stack-trace102103410", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace102103410'><pre>java.lang.AssertionError: Validation message is missing upon clicking on Submit with empty data expected [This field is required.] but found [This field is required. Please enter the first and last name.]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm(TryTorenzoForFreePageTest.java:125)
+	at com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithEmptyPhoneNumber(FeaturePageTest.java:195)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -151,8 +151,8 @@ About to begin executing following method : TryTorenzoForFreePageTest.tearDown<b
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>241</td>
-<td>com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@4cf777e8</td></tr>
+<td>40</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@73ad2d6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -162,19 +162,131 @@ About to begin executing following method : TryTorenzoForFreePageTest.tearDown<b
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.TryTorenzoForFreePageTest<br/>
-<a href="#Output-1399701152" onClick='toggleBox("Output-1399701152", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.closeToForm()'><b>closeToForm</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-769132147" onClick='toggleBox("Output-769132147", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1399701152" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1399701152">
-About to begin executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle<br/>
-Completed executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle<br/>
-About to begin executing following method : TryTorenzoForFreePageTest.tearDown<br/>
+<a href="#Output-769132147" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-769132147">
+About to begin executing following method : FeaturePageTest.closeToForm<br/>
+Completed executing following method : FeaturePageTest.closeToForm<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@73ad2d6</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormFromFeaturePage()'><b>fillFormFromFeaturePage</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-1493042329" onClick='toggleBox("Output-1493042329", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1493042329" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1493042329">
+About to begin executing following method : FeaturePageTest.fillFormFromFeaturePage<br/>
+Completed executing following method : FeaturePageTest.fillFormFromFeaturePage<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>26</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@73ad2d6</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithEmptyBussinesName()'><b>fillFormWithEmptyBussinesName</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-858727880" onClick='toggleBox("Output-858727880", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-858727880" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-858727880">
+About to begin executing following method : FeaturePageTest.fillFormWithEmptyBussinesName<br/>
+Completed executing following method : FeaturePageTest.fillFormWithEmptyBussinesName<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>36</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@73ad2d6</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithEmptyData()'><b>fillFormWithEmptyData</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-413373997" onClick='toggleBox("Output-413373997", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-413373997" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-413373997">
+About to begin executing following method : FeaturePageTest.fillFormWithEmptyData<br/>
+Completed executing following method : FeaturePageTest.fillFormWithEmptyData<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@73ad2d6</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithEmptyEmaildId()'><b>fillFormWithEmptyEmaildId</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-495857386" onClick='toggleBox("Output-495857386", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-495857386" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-495857386">
+About to begin executing following method : FeaturePageTest.fillFormWithEmptyEmaildId<br/>
+Completed executing following method : FeaturePageTest.fillFormWithEmptyEmaildId<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@73ad2d6</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.fillFormWithIncorrectEmailId()'><b>fillFormWithIncorrectEmailId</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-424226973" onClick='toggleBox("Output-424226973", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-424226973" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-424226973">
+About to begin executing following method : FeaturePageTest.fillFormWithIncorrectEmailId<br/>
+Completed executing following method : FeaturePageTest.fillFormWithIncorrectEmailId<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>37</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@73ad2d6</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.verifyFeaturesPageTitle()'><b>verifyFeaturesPageTitle</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-451460284" onClick='toggleBox("Output-451460284", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-451460284" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-451460284">
+About to begin executing following method : FeaturePageTest.verifyFeaturesPageTitle<br/>
+Completed executing following method : FeaturePageTest.verifyFeaturesPageTitle<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@73ad2d6</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-2003463579" onClick='toggleBox("Output-2003463579", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2003463579" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2003463579">
+About to begin executing following method : FeaturePageTest.verifyHomePageTitle<br/>
+Completed executing following method : FeaturePageTest.verifyHomePageTitle<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@4cf777e8</td></tr>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@73ad2d6</td></tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.FeaturePageTest.verifyTryTorenzoForFree()'><b>verifyTryTorenzoForFree</b><br>Test class: com.torenzosite.qa.testcases.FeaturePageTest<br/>
+<a href="#Output-75470648" onClick='toggleBox("Output-75470648", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-75470648" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-75470648">
+About to begin executing following method : FeaturePageTest.verifyTryTorenzoForFree<br/>
+Completed executing following method : FeaturePageTest.verifyTryTorenzoForFree<br/>
+About to begin executing following method : FeaturePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>com.torenzosite.qa.testcases.FeaturePageTest@73ad2d6</td></tr>
 </table><p>
 </body>
 </html>

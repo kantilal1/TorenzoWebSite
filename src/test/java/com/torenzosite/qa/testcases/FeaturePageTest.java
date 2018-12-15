@@ -177,6 +177,7 @@ public class FeaturePageTest extends TestBase{
 		Thread.sleep(2000);
 		System.out.println("Title==>" +tryTorenzoForFreePage.validateTryTorenzoForFree());
 		Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today page not found");		 	
+		Thread.sleep(3000);
 		tryTorenzoForFreePage.passFirstName("Sachin");
 		tryTorenzoForFreePage.passLastName("Patil");
 		tryTorenzoForFreePage.passBussiness("Restarant");	

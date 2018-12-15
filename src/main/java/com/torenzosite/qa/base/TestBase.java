@@ -3,15 +3,19 @@ package com.torenzosite.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.torenzosite.qa.util.TestUtil;
 
@@ -33,8 +37,8 @@ public class TestBase {
 		}
 		
 	}
-			
-	public static void initialization() throws InterruptedException{
+		
+	public static void initialization() throws InterruptedException, MalformedURLException{
 		
 		String broweserName = prop.getProperty("browser");
 		if(broweserName.equals("FF")){
@@ -49,18 +53,32 @@ public class TestBase {
 			System.setProperty("webdriver.firefox.marionette", "false");
 			driver = new FirefoxDriver();
 
+		}	
+		
+		else if (broweserName.equals("grid")){
+			DesiredCapabilities caps = new DesiredCapabilities();
+			caps.setBrowserName("chrome");
+			caps.setPlatform(Platform.WIN10);
+			ChromeOptions options = new ChromeOptions();
+			options.merge(caps);			
+			String hubUrl = "http://192.168.1.123:4444/wd/hub";			
+			WebDriver driver = new RemoteWebDriver(new URL(hubUrl), options);
+						
 		}
-
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);		
         driver.get(prop.getProperty("torenzoURL"));
-	//	driver.get(prop.getProperty("url1"));
-	
 	}
 
+	
+		
+	}
+	
+	//	driver.get(prop.getProperty("url1"));
+	
+	
 
 
-}

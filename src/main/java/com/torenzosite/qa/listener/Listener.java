@@ -52,7 +52,7 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 	
 		try{
 			
-			//TakeScreenshot.takeScreenshot();
+			TakeScreenshot.takeScreenshot();
 			System.out.println("Screenshot is captured for pass TC");
 			
 			System.out.println("Printed pass test case name is =>" +arg0);	

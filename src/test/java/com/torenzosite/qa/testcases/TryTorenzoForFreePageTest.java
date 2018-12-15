@@ -16,6 +16,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.torenzosite.qa.base.GridChromeTest;
 import com.torenzosite.qa.base.TestBase;
 import com.torenzosite.qa.pages.ContactUsPage;
 import com.torenzosite.qa.pages.HardwarePage;
@@ -37,6 +38,8 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	@BeforeMethod
 	public void setUp() throws IOException, InterruptedException{
 		
+	/*	GridChromeTest ct = new GridChromeTest();
+		ct.Launch();*/
 		initialization();
 		homePage = new HomePage();	
 		tryTorenzoForFreePage = new TryTorenzoForFreePage();
@@ -127,12 +130,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 						tryTorenzoForFreePage.clickOnClose();
 					}
 					
-					else if(rowNum==4){
-						
-						
-						
-						
-					}
+				
 					else if(rowNum==7){
 						
 						System.out.println("Alert Message ==>" +contactUsPage.getTextFromAlertMessage());

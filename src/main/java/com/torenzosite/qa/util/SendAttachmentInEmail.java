@@ -38,6 +38,7 @@ public class SendAttachmentInEmail {
 		SendAttachmentInEmail ml = new SendAttachmentInEmail();
 		ml.email();
 		}
+	
 	public void email() throws InterruptedException
 		{    String filename2;
 		     String filename;		
@@ -105,7 +106,7 @@ public class SendAttachmentInEmail {
 	       throw new RuntimeException(e);
 	    }
 	         
-	/*        try {
+	        try {
 	   	     System.out.println("Attaching .html report from TestNG");
 	              Message message = new MimeMessage(session);
 	   	       message.setFrom(new InternetAddress(from));
@@ -119,7 +120,7 @@ public class SendAttachmentInEmail {
 		       multipart.addBodyPart(messageBodyPart);
 		       messageBodyPart = new MimeBodyPart();
 		       Thread.sleep(5000);		    
-		       	filename = "E:\\Appium1\\StableMavenProject\\test-output\\Torenzo.html"; 
+		       	filename = "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\test-output\\TorenzoWebSiteReport.html"; 
 		    	   DataSource source = new FileDataSource(filename);
 		    	   messageBodyPart.setDataHandler(new DataHandler(source));
 		    	     messageBodyPart.setFileName(filename);
@@ -133,7 +134,7 @@ public class SendAttachmentInEmail {
  	
 	    } catch (MessagingException e) {
 	       throw new RuntimeException(e);
-	    }*/
+	    }
 	        
 	       try {
 		   	           System.out.println("Crash report or Execution report of the app");
@@ -159,7 +160,7 @@ public class SendAttachmentInEmail {
 			       message2.setContent(multipart2);
      
 			        Transport.send(message2);
-	         System.out.println(".txt report Sent successfully....");
+	         System.out.println(" Sent emailable-report.html successfully....");
 	    } catch (MessagingException e) {
 		       throw new RuntimeException(e);
 		    }
