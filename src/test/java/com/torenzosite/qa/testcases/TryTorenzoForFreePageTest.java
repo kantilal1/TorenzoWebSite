@@ -7,10 +7,16 @@ import org.testng.annotations.Listeners;
 import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.concurrent.TimeUnit;
+
 import static com.torenzosite.qa.pages.TryTorenzoForFreePage.phoneNo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -22,6 +28,7 @@ import com.torenzosite.qa.pages.ContactUsPage;
 import com.torenzosite.qa.pages.HardwarePage;
 import com.torenzosite.qa.pages.HomePage;
 import com.torenzosite.qa.pages.TryTorenzoForFreePage;
+import com.torenzosite.qa.util.TestUtil;
 import com.torenzosite.qa.util.XlsReader;
 @Listeners(com.torenzosite.qa.listener.Listener.class)
 public class TryTorenzoForFreePageTest extends TestBase {
@@ -29,7 +36,9 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	HomePage homePage;
 	TryTorenzoForFreePage tryTorenzoForFreePage;
 	ContactUsPage contactUsPage;
-	
+	 
+	   Actions action;
+	   
 	public TryTorenzoForFreePageTest() throws IOException, InterruptedException {
 		super();
 		
@@ -37,9 +46,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	
 	@BeforeMethod
 	public void setUp() throws IOException, InterruptedException{
-		
-	/*	GridChromeTest ct = new GridChromeTest();
-		ct.Launch();*/
+	
 		initialization();
 		homePage = new HomePage();	
 		tryTorenzoForFreePage = new TryTorenzoForFreePage();
@@ -50,13 +57,15 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	
 	@Test(priority=29)
 	public void verifyHomePageTitle(){
-			
+        // below xpath for image of torenzo logo 
+		
+		
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
 		Assert.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");		 
 		
 	}
 	
-	@Test(priority=30)
+	/*@Test(priority=30)
 	public void clickOnTryTorenzoForFreeAndFillForm() throws IOException, InterruptedException{
 			
 		XlsReader reader = new XlsReader("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\testdata\\TorenzoWorkBook.xlsx");
@@ -86,13 +95,10 @@ public class TryTorenzoForFreePageTest extends TestBase {
 		                   
 		          System.out.println("Title==>" +tryTorenzoForFreePage.validateTryTorenzoForFree());
 					Assert.assertEquals(tryTorenzoForFreePage.validateTryTorenzoForFree(), "Try Torenzo for FREE today", "Try Torenzo for FREE today page not found");		 	
-					Thread.sleep(8000);
-					tryTorenzoForFreePage.passFirstName(FirstName);
-					Thread.sleep(2000);
-					tryTorenzoForFreePage.passLastName(LastName);
-					Thread.sleep(2000);
-					tryTorenzoForFreePage.passBussiness(BussinessName);	
-					Thread.sleep(2000);
+					driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);		
+					tryTorenzoForFreePage.passFirstName(FirstName);			
+					tryTorenzoForFreePage.passLastName(LastName);			
+					tryTorenzoForFreePage.passBussiness(BussinessName);		
 					Select drpCountry = new Select(driver.findElement(By.id("input_6_7")));
 					drpCountry.selectByVisibleText(State);
 					Thread.sleep(2000);
@@ -101,17 +107,15 @@ public class TryTorenzoForFreePageTest extends TestBase {
 					
 					System.out.println("rowNum==>" +rowNum);
 					if(rowNum==3 || rowNum==4){
-						Thread.sleep(2000);
+						driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);		
 						jse.executeScript("arguments[0].value= '';", phoneNo);	
 						
 					}
 					else{
-						Thread.sleep(2000);
+						driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);		
 						jse.executeScript("arguments[0].value= '(222)555-4545';", phoneNo);	
-					}
-					Thread.sleep(2000);		
-					tryTorenzoForFreePage.passEmailID(Email);
-			
+					}				
+					tryTorenzoForFreePage.passEmailID(Email);			
 					tryTorenzoForFreePage.clickOnSubmit();
 					Thread.sleep(3000);
 					if(rowNum==2){
@@ -146,6 +150,8 @@ public class TryTorenzoForFreePageTest extends TestBase {
 		 
 		   }			
 			
+		  
+		   
 		 }
 	
 
@@ -153,7 +159,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	public void tearDown(){
 		driver.quit();
 	}
-	
+	*/
 	
 }
 

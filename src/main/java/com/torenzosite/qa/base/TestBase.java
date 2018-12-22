@@ -14,19 +14,24 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.torenzosite.qa.util.TestUtil;
 
+import io.appium.java_client.android.AndroidDriver;
+
 public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
+	public static AndroidDriver driver1;
 	
 	public TestBase() throws IOException, InterruptedException{
 		try{
 			prop = new Properties();
+		
 			FileInputStream fis = new FileInputStream("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\config\\config.properties");
 		prop.load(fis);
 		}catch(FileNotFoundException e){
@@ -43,19 +48,45 @@ public class TestBase {
 		String broweserName = prop.getProperty("browser");
 		if(broweserName.equals("FF")){
 			
-			System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\FileDriver\\geckodriver.exe");
-			
-			driver = new ChromeDriver();
+			System.setProperty("webdriver.gecko.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\geckodriver.exe");
+			System.setProperty("webdriver.firefox.marionette", "false");
+			driver = new FirefoxDriver();
+		
 		}
 		else if (broweserName.equals("chrome")){
 
-			System.setProperty("webdriver.gecko.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\FileDriver\\chromedriver.exe");		
-			System.setProperty("webdriver.firefox.marionette", "false");
-			driver = new FirefoxDriver();
+			System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");		
+			
+			driver = new ChromeDriver();
 
 		}	
 		
-		else if (broweserName.equals("grid")){
+		else if (broweserName.equals("IE")){
+
+	
+			System.setProperty("webdriver.ie.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\IEDriverServer.exe");		
+		
+			driver = new InternetExplorerDriver();
+			
+		}
+		
+		else if (broweserName.equals("mobileChrome")){
+
+			DesiredCapabilities caps = new DesiredCapabilities();
+			caps.setCapability("deviceName", "Honor");
+			caps.setCapability("udid", "192.168.157.101:5555");
+			caps.setCapability("platformName", "Android");
+			caps.setCapability("platformVersion", "6.0");
+			caps.setCapability("browserName", "Chrome");	
+		//System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");		
+			
+			
+			URL url = new URL("http://0.0.0.0:4723/wd/hub");
+		 driver = new AndroidDriver(url, caps);
+			
+		}
+		
+		/*else if (broweserName.equals("grid")){
 			DesiredCapabilities caps = new DesiredCapabilities();
 			caps.setBrowserName("chrome");
 			caps.setPlatform(Platform.WIN10);
@@ -64,20 +95,21 @@ public class TestBase {
 			String hubUrl = "http://192.168.1.123:4444/wd/hub";			
 			WebDriver driver = new RemoteWebDriver(new URL(hubUrl), options);
 						
-		}
+		}*/
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);		
         driver.get(prop.getProperty("torenzoURL"));
+       // 	driver.get(prop.getProperty("url1"));
 	}
 
 	
 		
 	}
 	
-	//	driver.get(prop.getProperty("url1"));
+	
 	
 	
 

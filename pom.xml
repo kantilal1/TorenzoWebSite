@@ -19,7 +19,11 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.14.0</version>
 	</dependency>
-			
+			<dependency>
+		<groupId>io.appium</groupId>
+		<artifactId>java-client</artifactId>
+		<version>5.0.0-BETA5</version>
+	</dependency>
 	<dependency>
     <groupId>com.liferay.portal</groupId>
     <artifactId>com.liferay.portal.kernel</artifactId>

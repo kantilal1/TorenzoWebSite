@@ -1,63 +1,76 @@
 package com.torenzosite.qa.pages;
 import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.torenzosite.qa.base.TestBase;
 import static com.torenzosite.qa.util.TestUtil.title;
 public class HomePage extends TestBase {
-
+	
 	@FindBy(linkText= "Torenzo POS")
+	@CacheLookup
 	WebElement torenzoPOS;
 	
 	@FindBy(linkText= "Features")
+	@CacheLookup
 	WebElement features;
 
+
 	@FindBy(linkText= "Hardware")
+	@CacheLookup
 	WebElement hardware;
 
+
 	@FindBy(linkText= "Pricing")
+	@CacheLookup
 	WebElement pricing;
 
+
 	@FindBy(linkText= "About Us")
+	@CacheLookup
 	WebElement aboutUs;
 
-	@FindBy(xpath= "//*[contains(text(),'Try Torenzo For Free')]")
+	@FindBy(xpath= "//*[contains(text(),'Try Torenzo For Free')]")	
 	 WebElement tryTorenzoForFree;
-
+	
 	@FindBy(xpath= "//input[@type='text' and @placeholder='Email Address']")
+	@CacheLookup
 	WebElement emailAddress;
 	
 	@FindBy(xpath= "//input[@type='submit' and @value='CLICK HERE TO TRY TORENZO FOR FREE']")
+	@CacheLookup
 	WebElement ClickHereToTryTorenzoForFree;
-	
+		
 	@FindBy(xpath= "//a[text()='Leave us a message']")
+	@CacheLookup
 	WebElement LeaveUsaMessage;
 	
-	@FindBy(xpath= "//a[text()='Privacy Policy' ]")
+	@FindBy(xpath= "//a[text()='Privacy Policy']")
+	@CacheLookup
 	WebElement privacyPolicy;
 	
 	@FindBy(xpath= "//a[text()='Website by Pronto' ]")
 	WebElement websiteByPronto;
 	
+	@CacheLookup
 	@FindBy(xpath= "//a[text()='Home']")
 	WebElement home;
 	
+	@CacheLookup
 	@FindBy(xpath= "//a[text()='Contact Us' ]")
 	public static WebElement contactUs;
 
+	@CacheLookup
 	@FindBy(xpath= "//a[text()='Blog' ]")
 	WebElement blog;
 		
 
-
 	public HomePage() throws IOException, InterruptedException{
 		PageFactory.initElements(driver, this);
 	}
-	
 
 		public String validateHomePageTitle(){
 			

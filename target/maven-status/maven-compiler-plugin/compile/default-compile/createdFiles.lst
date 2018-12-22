@@ -7,6 +7,7 @@ com\torenzosite\qa\util\TestUtil.class
 com\torenzosite\qa\pages\TorenzoPOSPage.class
 com\torenzosite\qa\pages\FeaturesPage.class
 com\torenzosite\qa\util\XlsReader.class
+com\torenzosite\qa\base\GridChromeTest.class
 com\torenzosite\qa\pages\AboutUsPage.class
 com\torenzosite\qa\pages\TryTorenzoForFreePage.class
 com\torenzosite\qa\base\TestBase.class
