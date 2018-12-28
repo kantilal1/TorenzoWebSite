@@ -50,7 +50,7 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 
 		// This is calling the printTestResults method
 	
-		try{
+		/*try{
 			
 			TakeScreenshot.takeScreenshot();
 			System.out.println("Screenshot is captured for pass TC");
@@ -62,7 +62,7 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 			System.out.println("Screenshot is not captured for pass TC");
 		e.printStackTrace();
 	    }
-
+*/
 	}
 
 	// This belongs to ITestListener and will execute only on the event of fail test
@@ -73,9 +73,18 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 		try{
 			
 			TakeScreenshot.takeScreenshot();
-			System.out.println("Screenshot is captured for failure TC");
-			
-			System.out.println("Printed failure class name is =>" +arg0);	
+			System.out.println("Screenshot is captured for failure TC");		
+			System.out.println("Printed failure class name is and sending mail only for screenshot =>" +arg0);	
+			try {
+				Thread.sleep(5000);
+				System.out.println("Now here");
+				SendAttachmentInEmail call1 = new SendAttachmentInEmail();
+		     	call1.sentScreenShot();
+		    	System.out.println("Now here1");
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 		}catch(Exception e)
 		{

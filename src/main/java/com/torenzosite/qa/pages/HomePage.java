@@ -49,22 +49,24 @@ public class HomePage extends TestBase {
 	WebElement LeaveUsaMessage;
 	
 	@FindBy(xpath= "//a[text()='Privacy Policy']")
-	@CacheLookup
 	WebElement privacyPolicy;
 	
 	@FindBy(xpath= "//a[text()='Website by Pronto' ]")
 	WebElement websiteByPronto;
 	
-	@CacheLookup
+	
 	@FindBy(xpath= "//a[text()='Home']")
+	@CacheLookup
 	WebElement home;
 	
-	@CacheLookup
+
 	@FindBy(xpath= "//a[text()='Contact Us' ]")
+	@CacheLookup
 	public static WebElement contactUs;
 
-	@CacheLookup
+	
 	@FindBy(xpath= "//a[text()='Blog' ]")
+	@CacheLookup
 	WebElement blog;
 		
 
@@ -104,6 +106,7 @@ public class HomePage extends TestBase {
 		}
 	
 		public TryTorenzoForFreePage clickOnTryTorenzoForFree() throws IOException, InterruptedException{
+			   Thread.sleep(2000);
 			tryTorenzoForFree.click();
 			return new TryTorenzoForFreePage();
 			

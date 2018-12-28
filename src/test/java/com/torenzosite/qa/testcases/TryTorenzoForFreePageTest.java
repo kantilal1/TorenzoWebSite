@@ -37,7 +37,7 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	TryTorenzoForFreePage tryTorenzoForFreePage;
 	ContactUsPage contactUsPage;
 	 
-	   Actions action;
+	  Actions action;
 	   
 	public TryTorenzoForFreePageTest() throws IOException, InterruptedException {
 		super();
@@ -46,33 +46,44 @@ public class TryTorenzoForFreePageTest extends TestBase {
 	
 	@BeforeMethod
 	public void setUp() throws IOException, InterruptedException{
-	
-		initialization();
-		homePage = new HomePage();	
-		tryTorenzoForFreePage = new TryTorenzoForFreePage();
-		contactUsPage =new ContactUsPage(); 
-		
+			
+		String broweserName = prop.getProperty("browser");
+	if (broweserName.equals("mobileChrome")){
+			
+			System.out.println("Testing WebSite on Anddroid Emulator");
+			initialization();
+			homePage = new HomePage();	
+			tryTorenzoForFreePage = new TryTorenzoForFreePage();
+			contactUsPage =new ContactUsPage(); 
+		}
+		else{
+			
+			initialization();
+			homePage = new HomePage();	
+			tryTorenzoForFreePage = new TryTorenzoForFreePage();
+			contactUsPage =new ContactUsPage(); 
+			
+		}				
 		
 	} 
 	
 	@Test(priority=29)
 	public void verifyHomePageTitle(){
         // below xpath for image of torenzo logo 
-		
-		
+	
 		System.out.println("Title==>" +	homePage.validateHomePageTitle());
 		Assert.assertEquals(homePage.validateHomePageTitle(), "Mobile POS Software for Businesses, Point of Sale Hardware, Retail Management Systems - Detroit, Ann Arbor, Warren | Torenzo", "Torenzo titile not found");		 
 		
 	}
 	
-	/*@Test(priority=30)
+	@Test(priority=30)
 	public void clickOnTryTorenzoForFreeAndFillForm() throws IOException, InterruptedException{
 			
 		XlsReader reader = new XlsReader("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\testdata\\TorenzoWorkBook.xlsx");
 		   int rowCount=reader.getRowCount("Sheet1");
 		   for(int rowNum=2; rowNum<=rowCount; rowNum++)
 		   {
-			   Thread.sleep(2000);
+			   Thread.sleep(4000);
 				tryTorenzoForFreePage = homePage.clickOnTryTorenzoForFree();
 				Thread.sleep(2000);
 		       String FirstName = reader.getCellData("Sheet1", "First Name", rowNum); 
@@ -148,18 +159,26 @@ public class TryTorenzoForFreePageTest extends TestBase {
 					driver.navigate().refresh();
 					System.out.println("	===>>>	TryTorenzoForFreePageTest class Done <====");				
 		 
-		   }			
-			
-		  
+		   }				  
 		   
 		 }
 	
 
 	@AfterMethod
 	public void tearDown(){
-		driver.quit();
+		
+		String broweserName = prop.getProperty("browser");	
+		if (broweserName.equals("mobileChrome")){
+			
+			System.out.println("Testing WebSite on Anddroid Emulator");
+		}
+		else{
+			driver.quit();
+			
+		}
+	
 	}
-	*/
+	
 	
 }
 

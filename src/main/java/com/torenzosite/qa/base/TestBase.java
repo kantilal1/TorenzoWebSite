@@ -58,16 +58,12 @@ public class TestBase {
 			System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");		
 			
 			driver = new ChromeDriver();
-
 		}	
 		
 		else if (broweserName.equals("IE")){
-
-	
 			System.setProperty("webdriver.ie.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\IEDriverServer.exe");		
 		
-			driver = new InternetExplorerDriver();
-			
+			driver = new InternetExplorerDriver();		
 		}
 		
 		else if (broweserName.equals("mobileChrome")){
@@ -77,10 +73,7 @@ public class TestBase {
 			caps.setCapability("udid", "192.168.157.101:5555");
 			caps.setCapability("platformName", "Android");
 			caps.setCapability("platformVersion", "6.0");
-			caps.setCapability("browserName", "Chrome");	
-		//System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");		
-			
-			
+			caps.setCapability("browserName", "Chrome");					
 			URL url = new URL("http://0.0.0.0:4723/wd/hub");
 		 driver = new AndroidDriver(url, caps);
 			
@@ -96,15 +89,22 @@ public class TestBase {
 			WebDriver driver = new RemoteWebDriver(new URL(hubUrl), options);
 						
 		}*/
-		
-		driver.manage().window().maximize();
+		if (broweserName.equals("mobileChrome")){
+			
+			System.out.println("Testing WebSite on Anddroid Emulator");
+		}
+		else{
+			
+			driver.manage().window().maximize();	
+			
+		}
+			
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);		
         driver.get(prop.getProperty("torenzoURL"));
        // 	driver.get(prop.getProperty("url1"));
 	}
-
 	
 		
 	}

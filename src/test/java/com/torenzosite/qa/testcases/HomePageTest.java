@@ -81,7 +81,7 @@ public class HomePageTest extends TestBase{
 		Assert.assertEquals(tryTorenzoForFreePage.getTextFromValidationMessage(), "Please enter a valid email address.", "Alert Message is missing with invalid email id");
 		Assert.assertEquals(tryTorenzoForFreePage.getTextFromAlertMessage(), "There was a problem with your submission. Errors have been highlighted below.","Validation message is missing with inavalid email id");
 		
-	} 
+	}
 
 	@AfterMethod
 	public void tearDown(){

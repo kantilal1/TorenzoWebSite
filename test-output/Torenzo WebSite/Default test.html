@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Dec 22 12:53:38 IST 2018</td>
+<td>Started on:</td><td>Thu Dec 27 11:15:03 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>87 seconds (87084 ms)</td>
+<tr><td>Total time:</td><td>52 seconds (52822 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.setUp()'><b>setUp</b><br>Test class: com.torenzosite.qa.testcases.TryTorenzoForFreePageTest<br/>
-<a href="#Output-1160649162" onClick='toggleBox("Output-1160649162", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1939022383" onClick='toggleBox("Output-1939022383", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1160649162" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1160649162">
+<a href="#Output-1939022383" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1939022383">
 Completed executing following method : TryTorenzoForFreePageTest.setUp<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: An unknown server-side error occurred while processing the command. (Original error: unknown error: Chrome version must be &gt;= 43.0.2357.0
-  (Driver info: chromedriver=2.18.343845 (73dd713ba7fbfb73cbb514e62641d8c96a94682a),platform=Windows NT 10.0 x86_64))) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 85.17 seconds
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Requested a new session but one was in progress) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.66 seconds
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: driver.version: AndroidDriver
@@ -121,8 +120,8 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:113)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
-	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:85)
-	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.setUp(TryTorenzoForFreePageTest.java:50)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:78)
+	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.setUp(TryTorenzoForFreePageTest.java:54)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -151,10 +150,9 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1160649162", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1160649162'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: An unknown server-side error occurred while processing the command. (Original error: unknown error: Chrome version must be &gt;= 43.0.2357.0
-  (Driver info: chromedriver=2.18.343845 (73dd713ba7fbfb73cbb514e62641d8c96a94682a),platform=Windows NT 10.0 x86_64))) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 85.17 seconds
+</pre></div><a href='#' onClick='toggleBox("stack-trace1939022383", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1939022383'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Requested a new session but one was in progress) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.66 seconds
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: driver.version: AndroidDriver
@@ -190,8 +188,8 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:113)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
-	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:85)
-	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.setUp(TryTorenzoForFreePageTest.java:50)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:78)
+	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.setUp(TryTorenzoForFreePageTest.java:54)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -221,8 +219,43 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>86</td>
-<td>com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@29ca901e</td></tr>
+<td>1</td>
+<td>com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@5649fd9b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.tearDown()'><b>tearDown</b><br>Test class: com.torenzosite.qa.testcases.TryTorenzoForFreePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@5649fd9b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.TryTorenzoForFreePageTest<br/>
+<a href="#Output-261748192" onClick='toggleBox("Output-261748192", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-261748192" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-261748192">
+About to begin executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle<br/>
+Completed executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle<br/>
+About to begin executing following method : TryTorenzoForFreePageTest.tearDown<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@5649fd9b</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -232,21 +265,20 @@ Driver info: driver.version: AndroidDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.verifyHomePageTitle()'><b>verifyHomePageTitle</b><br>Test class: com.torenzosite.qa.testcases.TryTorenzoForFreePageTest<br/>
-<a href="#Output-79438382" onClick='toggleBox("Output-79438382", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm()'><b>clickOnTryTorenzoForFreeAndFillForm</b><br>Test class: com.torenzosite.qa.testcases.TryTorenzoForFreePageTest<br/>
+<a href="#Output-1777443462" onClick='toggleBox("Output-1777443462", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-79438382" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-79438382">
+<a href="#Output-1777443462" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1777443462">
 (About@Test Method)Test Method resides in com.torenzosite.qa.testcases.TryTorenzoForFreePageTest<br/>
 Test Status: Skipped<br/>
-About to begin executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle<br/>
-Completed executing following method : TryTorenzoForFreePageTest.verifyHomePageTitle<br/>
+About to begin executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm<br/>
+Completed executing following method : TryTorenzoForFreePageTest.clickOnTryTorenzoForFreeAndFillForm<br/>
 After executing test method once onlyDefault test<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: An unknown server-side error occurred while processing the command. (Original error: unknown error: Chrome version must be &gt;= 43.0.2357.0
-  (Driver info: chromedriver=2.18.343845 (73dd713ba7fbfb73cbb514e62641d8c96a94682a),platform=Windows NT 10.0 x86_64))) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 85.17 seconds
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Requested a new session but one was in progress) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.66 seconds
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: driver.version: AndroidDriver
@@ -282,8 +314,8 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:113)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
-	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:85)
-	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.setUp(TryTorenzoForFreePageTest.java:50)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:78)
+	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.setUp(TryTorenzoForFreePageTest.java:54)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -312,10 +344,9 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace79438382", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace79438382'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: An unknown server-side error occurred while processing the command. (Original error: unknown error: Chrome version must be &gt;= 43.0.2357.0
-  (Driver info: chromedriver=2.18.343845 (73dd713ba7fbfb73cbb514e62641d8c96a94682a),platform=Windows NT 10.0 x86_64))) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 85.17 seconds
+</pre></div><a href='#' onClick='toggleBox("stack-trace1777443462", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1777443462'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Requested a new session but one was in progress) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.66 seconds
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.38.26&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: driver.version: AndroidDriver
@@ -351,8 +382,8 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:113)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:73)
-	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:85)
-	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.setUp(TryTorenzoForFreePageTest.java:50)
+	at com.torenzosite.qa.base.TestBase.initialization(TestBase.java:78)
+	at com.torenzosite.qa.testcases.TryTorenzoForFreePageTest.setUp(TryTorenzoForFreePageTest.java:54)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -383,7 +414,7 @@ Driver info: driver.version: AndroidDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@29ca901e</td></tr>
+<td>com.torenzosite.qa.testcases.TryTorenzoForFreePageTest@5649fd9b</td></tr>
 </table><p>
 </body>
 </html>

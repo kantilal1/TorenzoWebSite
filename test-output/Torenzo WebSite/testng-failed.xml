@@ -4,14 +4,15 @@
   <listeners>
     <listener class-name="com.torenzosite.qa.extentreprot.ExtentReportListener"/>
   </listeners>
-  <test thread-count="5" name="Default test(failed)">
+  <test thread-count="5" name="TorenzoTest(failed)">
     <classes>
-      <class name="com.torenzosite.qa.testcases.TryTorenzoForFreePageTest">
+      <class name="com.torenzosite.qa.testcases.HomePageTest">
         <methods>
-          <include name="verifyHomePageTitle"/>
+          <include name="verifyEmailAddreeField"/>
           <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.torenzosite.qa.testcases.TryTorenzoForFreePageTest -->
+      </class> <!-- com.torenzosite.qa.testcases.HomePageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
+  </test> <!-- TorenzoTest(failed) -->
 </suite> <!-- Failed suite [Torenzo WebSite] -->
