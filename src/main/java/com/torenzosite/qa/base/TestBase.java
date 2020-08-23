@@ -21,6 +21,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import com.torenzosite.qa.util.TestUtil;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 
@@ -32,7 +33,7 @@ public class TestBase {
 		try{
 			prop = new Properties();
 		
-			FileInputStream fis = new FileInputStream("E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\src\\main\\java\\com\\torenzosite\\qa\\config\\config.properties");
+			FileInputStream fis = new FileInputStream(".\\src\\main\\java\\com\\torenzosite\\qa\\config\\config.properties");
 		prop.load(fis);
 		}catch(FileNotFoundException e){
 			e.printStackTrace();		
@@ -48,21 +49,18 @@ public class TestBase {
 		String broweserName = prop.getProperty("browser");
 		if(broweserName.equals("FF")){
 			
-			System.setProperty("webdriver.gecko.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\geckodriver.exe");
-			System.setProperty("webdriver.firefox.marionette", "false");
+		   WebDriverManager.chromedriver().setup();
 			driver = new FirefoxDriver();
 		
 		}
 		else if (broweserName.equals("chrome")){
 
-			System.setProperty("webdriver.chrome.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\chromedriver.exe");		
-			
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}	
 		
 		else if (broweserName.equals("IE")){
-			System.setProperty("webdriver.ie.driver", "E:\\SeleniumWorkSpace\\torenzowebsite\\TorenzoWebSite\\FileDriver\\IEDriverServer.exe");		
-		
+			WebDriverManager.chromedriver().setup();
 			driver = new InternetExplorerDriver();		
 		}
 		
